@@ -4,39 +4,39 @@ import "../styles/responsive.css"
 function Login() {
   return (
     <>
-      <main class="Sign_in">
-        <form autocomplete="off">
-          <div class="signin">
-            <h2>Sign in</h2>
-            <div class="E-mail" id="user-up">
-              <i class="fa-solid fa-envelope-open"></i>
+      <main className="Sign_in">
+        <form autoComplete="off">
+          <div className="signin">
+            <h2>Login</h2>
+            <div className="E-mail" id="user-up">
+              <i className="fa-solid fa-envelope-open"></i>
               <input
                 id="email"
-                autocomplete="off"
+                autoComplete="off"
                 type="email"
                 name="email"
                 placeholder="Email"
                 required
               />
             </div>
-            <div class="Password" id="user-up">
-              <i class="fa-solid fa-lock"></i>
+            <div className="Password" id="user-up">
+              <i className="fa-solid fa-lock"></i>
               <input
                 id="password"
-                autocomplete="off"
+                autoComplete="off"
                 type="password"
                 name="password"
                 placeholder="Password"
                 required
               />
             </div>
-            <div class="create_button">
+            <div className="create_button">
               <button type="submit" id="btn">
                 Sign in
               </button>
             </div>
             <p>
-              Don't have an account? <a href="./sign_up.html">Sign up</a>
+              Don't have an account? <a href="./Signup.jsx">Signup</a>
             </p>
           </div>
         </form>

@@ -4,15 +4,15 @@ import "../styles/responsive.css";
 
 function Signup() {
   <>
-    <main class="Sign_up">
-      <form autocomplete="off">
-        <div class="signup">
+    <main className="Sign_up">
+      <form autoComplete="off">
+        <div className="signup">
           <h2>Sign Up</h2>
-          <div class="name" id="user-up">
-            <i class="fa-solid fa-circle-user"></i>
+          <div className="name" id="user-up">
+            <i className="fa-solid fa-circle-user"></i>
             <input
               id="name"
-              autocomplete="off"
+              autoComplete="off"
               type="text"
               name="username"
               placeholder="Name"
@@ -20,35 +20,35 @@ function Signup() {
               style="text-transform: capitalize"
             />
           </div>
-          <div class="E-mail" id="user-up">
-            <i class="fa-solid fa-envelope-open"></i>
+          <div className="E-mail" id="user-up">
+            <i className="fa-solid fa-envelope-open"></i>
             <input
               id="email"
-              autocomplete="off"
+              autoComplete="off"
               type="email"
               name="email"
               placeholder="Email"
               required
             />
           </div>
-          <div class="Password" id="user-up">
-            <i class="fa-solid fa-lock"></i>
+          <div className="Password" id="user-up">
+            <i className="fa-solid fa-lock"></i>
             <input
               id="password"
-              autocomplete="off"
+              autoComplete="off"
               type="password"
               name="password"
               placeholder="Password"
               required
             />
           </div>
-          <div class="create_button">
+          <div className="create_button">
             <button type="submit" id="btn">
               Create Account
             </button>
           </div>
           <p>
-            Already have an account? <a href="./index.html">Sign in</a>
+            Already have an account? <a href="./Login.jsx">Sign in</a>
           </p>
         </div>
       </form>
