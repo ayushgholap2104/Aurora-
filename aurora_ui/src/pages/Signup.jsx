@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/signup.css";
 import "../styles/responsive.css"
+import logo from "../assets/img/AuroraLogo.png"
 
 function Signup() {
   return (
@@ -8,6 +9,9 @@ function Signup() {
       <main className="Sign_up">
         <form autoComplete="off">
           <div className="signup">
+            <div className="Aurora_logo">
+              <img src={logo} alt="AuroraLogo" />
+            </div>
             <h2>Sign Up</h2>
             <div className="name" id="user-up">
               <i className="fa-solid fa-circle-user"></i>

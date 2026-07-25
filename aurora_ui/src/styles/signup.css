@@ -10,9 +10,9 @@
 }
 /* For Sign up */
 .signup {
-  min-width: 440px;
+  min-width: 450px;
   /* border: 2px solid black; */
-  min-height: 450px;
+  min-height: 520px;
   display: flex;
   flex-direction: column;
   border-radius: 30px;
@@ -22,10 +22,22 @@
   justify-content: center;
   align-items: center;
 }
+.signup .Aurora_logo{
+  height: 55px;
+  width: 140px;
+}
+.signup .Aurora_logo img{
+  height: 100% ;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 8px
+}
 .signup h2 {
-  font-weight: 550;
+  font-weight: 500;
   font-size: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 #user-up {
   align-items: center;
@@ -58,9 +70,9 @@
 }
 
 #btn {
-  padding: 12px 40px;
+  padding: 12px 35px;
   /* width: 170px; */
-  font-weight: 500;
+  font-weight: 400;
   font-size: 15px;
   border-radius: 20px;
   color: #ffffff;

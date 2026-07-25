@@ -25,10 +25,21 @@
   justify-content: center;
   align-items: center;
 }
+.signin .Aurora_logo {
+  height: 55px;
+  width: 140px;
+}
+.signin .Aurora_logo img {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 8px;
+}
 .signin h2 {
-  font-weight: 550;
+  font-weight: 500;
   font-size: 30px;
-  margin-top: 10px;
 }
 #user-up {
   align-items: center;

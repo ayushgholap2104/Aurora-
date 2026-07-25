@@ -1,12 +1,16 @@
 import { useState } from "react";
 import "../styles/login.css";
-import "../styles/responsive.css"
+import "../styles/responsive.css";
+import logo from "../assets/img/AuroraLogo.png";
 function Login() {
   return (
     <>
       <main className="Sign_in">
         <form autoComplete="off">
           <div className="signin">
+            <div className="Aurora_logo">
+              <img src={logo} alt="AuroraLogo" />
+            </div>
             <h2>Login</h2>
             <div className="E-mail" id="user-up">
               <i className="fa-solid fa-envelope"></i>
