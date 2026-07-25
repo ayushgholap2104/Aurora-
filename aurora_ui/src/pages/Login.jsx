@@ -20,7 +20,7 @@ function Login() {
               />
             </div>
             <div className="Password" id="user-up">
-              <i className="fa-solid fa-lock"></i>
+              <i className="fa-solid fa-shield-halved"></i>
               <input
                 id="password"
                 autoComplete="off"
