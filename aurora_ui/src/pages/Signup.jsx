@@ -9,7 +9,7 @@ function Signup() {
         <div className="signup">
           <h2>Sign Up</h2>
           <div className="name" id="user-up">
-            <i className="fa-solid fa-circle-user"></i>
+            <i class="fa-solid fa-envelope"></i>
             <input
               id="name"
               autoComplete="off"

@@ -9,7 +9,7 @@ function Login() {
           <div className="signin">
             <h2>Login</h2>
             <div className="E-mail" id="user-up">
-              <i className="fa-solid fa-envelope-open"></i>
+              <i className="fa-solid fa-envelope"></i>
               <input
                 id="email"
                 autoComplete="off"

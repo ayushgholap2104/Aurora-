@@ -3,7 +3,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(../img/main-background.jpg);
+  background:
+    radial-gradient(circle at top right, #2a204e 0%, transparent 35%),
+    radial-gradient(circle at bottom left, #220a47 0%, transparent 30%), #0b1120;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +15,7 @@
 .signin {
   min-width: 440px;
   /* border: 2px solid black; */
-  min-height: 400px;
+  min-height: 440px;
   display: flex;
   flex-direction: column;
   border-radius: 30px;
@@ -26,7 +28,7 @@
 .signin h2 {
   font-weight: 550;
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 #user-up {
   align-items: center;
@@ -59,7 +61,7 @@
 }
 
 #btn {
-  padding: 12px 55px;
+  padding: 12px 40px;
   /* width: 170px; */
   font-weight: 400;
   font-size: 14px;
