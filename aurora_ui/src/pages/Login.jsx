@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/login.css";
 import "../styles/responsive.css";
 import logo from "../assets/img/AuroraLogo.png";
+import {Link} from "react-router-dom"
 function Login() {
   return (
     <>
@@ -40,7 +41,7 @@ function Login() {
               </button>
             </div>
             <p>
-              Don't have an account? <a href="./Signup.jsx">Signup</a>
+              Don't have an account? <Link to="/">Signup</Link>
             </p>
           </div>
         </form>

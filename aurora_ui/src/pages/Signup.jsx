@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/signup.css";
 import logo from "../assets/img/AuroraLogo.png"
 import "../styles/responsive.css";
+import {Link} from "react-router-dom"
 
 function Signup() {
   return (
@@ -52,7 +53,7 @@ function Signup() {
               </button>
             </div>
             <p>
-              Already have an account? <a href="./Login.jsx">Sign in</a>
+              Already have an account? <Link to="./login">Sign in</Link>
             </p>
           </div>
         </form>
