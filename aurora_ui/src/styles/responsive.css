@@ -2,9 +2,13 @@
 @media only screen and (max-width: 480px) {
   /* For Sign Up page */
   .signup {
-    min-width: 320px;
-    min-height: 410px;
+    min-width: 330px;
+    min-height: 470px;
     gap: 27px;
+  }
+  .signup .Aurora_logo {
+    height: 55px;
+    width: 120px;
   }
   .signup h2 {
     font-size: 27px;
@@ -30,9 +34,13 @@
   }
   /* For Sign in page */
   .signin {
-    min-width: 310px;
-    min-height: 380px;
+    min-width: 330px;
+    min-height: 410px;
     gap: 27px;
+  }
+  .signin .Aurora_logo {
+    height: 55px;
+    width: 120px;
   }
   .signin h2 {
     font-size: 27px;
@@ -44,9 +52,13 @@
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   /* For Sign Up page */
   .signup {
-    min-width: 390px;
-    min-height: 440px;
+    min-width: 400px;
+    min-height: 480px;
     gap: 27px;
+  }
+  .signup .Aurora_logo {
+    height: 55px;
+    width: 130px;
   }
   .signup h2 {
     font-size: 28px;
@@ -73,8 +85,12 @@
   /* For Sign in page */
   .signin {
     min-width: 400px;
-    min-height: 390px;
+    min-height: 420px;
     gap: 27px;
+  }
+  .signin .Aurora_logo {
+    height: 55px;
+    width: 130px;
   }
   .signin h2 {
     font-size: 28px;
@@ -87,10 +103,14 @@
   /* For Sign Up page */
   .signup {
     min-width: 420px;
-    min-height: 450px;
+    min-height: 500px;
   }
   .signup h2 {
     font-size: 29px;
+  }
+  .signup .Aurora_logo {
+    height: 55px;
+    width: 140px;
   }
   #user-up i {
     font-size: 24px;
@@ -114,8 +134,12 @@
   /* For Sign in page */
   .signin {
     min-width: 420px;
-    min-height: 400px;
+    min-height: 420px;
     gap: 27px;
+  }
+  .signin .Aurora_logo {
+    height: 55px;
+    width: 140px;
   }
   .signin h2 {
     font-size: 29px;

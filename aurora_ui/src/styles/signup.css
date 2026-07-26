@@ -68,6 +68,9 @@
 #user-up input::placeholder {
   font-size: 15px;
 }
+.signup #name{
+  text-transform: capitalize;
+}
 
 #btn {
   padding: 12px 40px;
