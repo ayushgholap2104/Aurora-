@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/signup.css";
-import "../styles/responsive.css"
 import logo from "../assets/img/AuroraLogo.png"
+import "../styles/responsive.css";
 
 function Signup() {
   return (
@@ -48,7 +48,7 @@ function Signup() {
             </div>
             <div className="create_button">
               <button type="submit" id="btn">
-                Create Account
+                Submit
               </button>
             </div>
             <p>

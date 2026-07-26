@@ -36,7 +36,7 @@ function Login() {
             </div>
             <div className="create_button">
               <button type="submit" id="btn">
-                Sign in
+                Submit
               </button>
             </div>
             <p>

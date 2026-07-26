@@ -1,0 +1,126 @@
+/* For signup */
+@media only screen and (max-width: 480px) {
+  /* For Sign Up page */
+  .signup {
+    min-width: 320px;
+    min-height: 410px;
+    gap: 27px;
+  }
+  .signup h2 {
+    font-size: 27px;
+  }
+  #user-up i {
+    font-size: 22px;
+  }
+  #user-up input {
+    width: 200px;
+    font-size: 15px;
+    height: 43px;
+  }
+
+  #user-up input::placeholder {
+    font-size: 13.5px;
+  }
+
+  #btn {
+    font-size: 12.5px;
+  }
+  .signup p {
+    font-size: 12px;
+  }
+  /* For Sign in page */
+  .signin {
+    min-width: 310px;
+    min-height: 380px;
+    gap: 27px;
+  }
+  .signin h2 {
+    font-size: 27px;
+  }
+  .signin p {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* For Sign Up page */
+  .signup {
+    min-width: 390px;
+    min-height: 440px;
+    gap: 27px;
+  }
+  .signup h2 {
+    font-size: 28px;
+  }
+  #user-up i {
+    font-size: 23px;
+  }
+  #user-up input {
+    width: 240px;
+    font-size: 15px;
+    height: 43px;
+  }
+
+  #user-up input::placeholder {
+    font-size: 14px;
+  }
+
+  #btn {
+    font-size: 13px;
+  }
+  .signup p {
+    font-size: 12.5px;
+  }
+  /* For Sign in page */
+  .signin {
+    min-width: 400px;
+    min-height: 390px;
+    gap: 27px;
+  }
+  .signin h2 {
+    font-size: 28px;
+  }
+  .signin p {
+    font-size: 12.5px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* For Sign Up page */
+  .signup {
+    min-width: 420px;
+    min-height: 450px;
+  }
+  .signup h2 {
+    font-size: 29px;
+  }
+  #user-up i {
+    font-size: 24px;
+  }
+  #user-up input {
+    width: 260px;
+    font-size: 15.5px;
+    height: 44px;
+  }
+
+  #user-up input::placeholder {
+    font-size: 14.5px;
+  }
+
+  #btn {
+    font-size: 13.5px;
+  }
+  .signup p {
+    font-size: 13px;
+  }
+  /* For Sign in page */
+  .signin {
+    min-width: 420px;
+    min-height: 400px;
+    gap: 27px;
+  }
+  .signin h2 {
+    font-size: 29px;
+  }
+  .signin p {
+    font-size: 13px;
+  }
+}

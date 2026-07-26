@@ -24,7 +24,7 @@
 }
 .signup .Aurora_logo{
   height: 55px;
-  width: 140px;
+  width: 150px;
 }
 .signup .Aurora_logo img{
   height: 100% ;
@@ -70,15 +70,19 @@
 }
 
 #btn {
-  padding: 12px 35px;
+  padding: 12px 40px;
   /* width: 170px; */
   font-weight: 400;
   font-size: 15px;
-  border-radius: 20px;
+  border-radius: 5px;
   color: #ffffff;
   background-color: #5a00b5;
   outline: none;
   border: none;
+  transition: background-color 0.4s ease;
+}
+#btn:hover{
+  background-color:  #45018a;
 }
 .signup p {
   font-size: 13.5px;
