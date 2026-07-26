@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./styles/responsive.css";
 
 const router = createBrowserRouter([
   {

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "../styles/login.css";
-import "../styles/responsive.css";
 import logo from "../assets/img/AuroraLogo.png";
 import {Link} from "react-router-dom"
 function Login() {

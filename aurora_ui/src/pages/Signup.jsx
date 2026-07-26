@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../styles/signup.css";
 import logo from "../assets/img/AuroraLogo.png"
-import "../styles/responsive.css";
 import {Link} from "react-router-dom"
 
 function Signup() {
