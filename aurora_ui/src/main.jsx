@@ -4,6 +4,7 @@ import "./index.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
+import Home from "./pages/Home"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/responsive.css";
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
   },
 ]);
 createRoot(document.getElementById("root")).render(
