@@ -1,6 +1,7 @@
+
 .Sidebar_container {
   min-height: 100vh;
-  width: 300px;
+  min-width: 20%;
   background: #0e1423;
   border-right: 1px solid #2F2F2F;
 }
@@ -105,18 +106,18 @@
 .Sidebar_container .sidebar_footer {
   position: fixed;
   bottom: 0px;
+  overflow: hidden;
 }
 .Sidebar_container .sidebar_footer .user_info {
   display: flex;
   gap: 20px;
   /* background-color: gray; */
-  min-width: 298px;
   background-color: none;
   padding: 14px 10px;
-  overflow: hidden;
   border-top: 1px solid #2A2A2A;
   cursor: pointer;
   color: #E5E7EB;
+  min-width: 288px;
 }
 .Sidebar_container .sidebar_footer .user_info p {
   padding: 4px 11px;
@@ -131,3 +132,16 @@
 .Sidebar_container .sidebar_footer .user_info .userName {
   font-size: 16px;
 }
+.main-content{
+  min-height: 100vh;
+  min-width: 80%;
+  background-color: #090D18;
+}
+.main-content .light-dark{
+  color: #E5E7EB; 
+  padding: 20px;
+  display: flex;
+  justify-content: end;
+  font-size: 17px;
+}
+

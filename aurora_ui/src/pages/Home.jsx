@@ -41,8 +41,10 @@ function Home(){
         </div>
       </div>
     </div>
-    <main>
-      
+    <main className="main-content">
+      <div className="light-dark">
+        <i class="fa-regular fa-moon"></i>
+      </div> 
     </main>
     </>
   )

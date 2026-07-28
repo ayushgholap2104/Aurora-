@@ -6,4 +6,7 @@
     box-sizing: border-box;
     font-family:'Poppins' ;
 }
-
+#root{
+    display: flex;
+    flex-direction: row;
+}
