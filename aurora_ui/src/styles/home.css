@@ -211,6 +211,7 @@
   border: none;
   font-size: 18px;
   color: #fff;
+  padding-left: 10px;
 
 }
 .Aurora_container .main_content .chat_footer .Input_message .user_query::placeholder{
