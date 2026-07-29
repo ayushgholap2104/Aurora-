@@ -1,19 +1,22 @@
-
-.Sidebar_container {
+.Aurora_container{
+  display: flex;
+  flex-direction: row;
   min-height: 100vh;
-  min-width: 20%;
+}
+.Aurora_container .Sidebar_container {
+  width: 320px;
   background: #0e1423;
   border-right: 1px solid #2F2F2F;
 }
 
-.Sidebar_container .sidebar_header {
+.Aurora_container .Sidebar_container .sidebar_header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 5px;
 }
-.sidebar_header .aurora_icon {
+.Aurora_container .sidebar_header .aurora_icon {
   height: 55px;
   width: 50px;
   display: flex;
@@ -22,18 +25,18 @@
   align-items: center;
   cursor: pointer;
 }
-.sidebar_header .aurora_icon p {
+.Aurora_container .sidebar_header .aurora_icon p {
   font-size: 22px;
   font-weight: 450;
   color: #E5E7EB;
 }
-.sidebar_header .aurora_icon img {
+.Aurora_container .sidebar_header .aurora_icon img {
   height: 100%;
   width: 100%;
   background-size: cover;
   object-fit: cover;
 }
-.sidebar_header .sidebar_icon {
+.Aurora_container .sidebar_header .sidebar_icon {
   margin-right: 20px;
   font-size: 20px;
   color: #E5E7EB;
@@ -41,11 +44,11 @@
   padding: 5px 8px;
   transition: background-color 0.2s ease;
 }
-.sidebar_header .sidebar_icon:hover {
-  background-color: rgb(51, 51, 51);
+.Aurora_container .sidebar_header .sidebar_icon:hover {
+  background-color: rgb(35, 35, 35);
   cursor: e-resize;
 }
-.Sidebar_container .new_chat {
+.Aurora_container .Sidebar_container .new_chat {
   display: flex;
   flex-direction: row;
   margin-left: 10px;
@@ -55,20 +58,20 @@
   padding: 10px 10px;
   background: linear-gradient(90deg, #4f46e5, #6d28d9);
   margin-right: 18px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   color: #E5E7EB;
 }
 
-.Sidebar_container .new_chat i {
+.Aurora_container .Sidebar_container .new_chat i {
   font-size: 17px;
   margin-left: 5px;
 }
-.Sidebar_container .new_chat p {
+.Aurora_container .Sidebar_container .new_chat p {
   font-weight: 400;
   font-size: 16px;
 }
-.Sidebar_container .sidebar_menu {
+.Aurora_container .Sidebar_container .sidebar_menu {
   margin-top: 25px;
   margin-left: 10px;
   display: flex;
@@ -76,39 +79,39 @@
   gap: 2px;
   margin-right: 18px;
 }
-.Sidebar_container .sidebar_menu .menu {
+.Aurora_container .Sidebar_container .sidebar_menu .menu {
   display: flex;
   align-items: center;
   gap: 15px;
   padding: 10px 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
   color: #E5E7EB;
 }
-.Sidebar_container .sidebar_menu .menu:hover {
+.Aurora_container .Sidebar_container .sidebar_menu .menu:hover {
   background-color:#2c2c2c;
 }
-.Sidebar_container .sidebar_menu .menu.active {
+.Aurora_container .Sidebar_container .sidebar_menu .menu.active {
   background-color:#2c2c2c;
 }
-.Sidebar_container .sidebar_menu .menu i {
+.Aurora_container .Sidebar_container .sidebar_menu .menu i {
   font-size: 17px;
   margin-left: 5px;
 }
-.Sidebar_container .sidebar_menu .menu a {
+.Aurora_container .Sidebar_container .sidebar_menu .menu a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
   color: #E5E7EB;
 }
 
-.Sidebar_container .sidebar_footer {
+.Aurora_container .Sidebar_container .sidebar_footer {
   position: fixed;
   bottom: 0px;
   overflow: hidden;
 }
-.Sidebar_container .sidebar_footer .user_info {
+.Aurora_container .Sidebar_container .sidebar_footer .user_info {
   display: flex;
   gap: 20px;
   /* background-color: gray; */
@@ -119,7 +122,7 @@
   color: #E5E7EB;
   min-width: 288px;
 }
-.Sidebar_container .sidebar_footer .user_info p {
+.Aurora_container .Sidebar_container .sidebar_footer .user_info p {
   padding: 4px 11px;
   background-color: #21C7B1;
   border-radius: 50%;
@@ -129,19 +132,99 @@
   align-items: center;
   justify-content: center;
 }
-.Sidebar_container .sidebar_footer .user_info .userName {
+.Aurora_container .Sidebar_container .sidebar_footer .user_info .userName {
   font-size: 16px;
 }
-.main-content{
-  min-height: 100vh;
-  min-width: 80%;
+.Aurora_container .main_content{
+  flex: 1;
   background-color: #090D18;
+  position: relative;
 }
-.main-content .light-dark{
-  color: #E5E7EB; 
-  padding: 20px;
+.Aurora_container .main_content .Chat_head{
+  position: fixed;
+  right: 0px;
   display: flex;
-  justify-content: end;
-  font-size: 17px;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px;
+  gap: 20px;
+}
+.Aurora_container .main_content .Chat_head .light_dark{
+  color: #E5E7EB; 
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 8px;
+  transition: background-color 0.2s ease;
+}
+.Aurora_container .main_content .Chat_head .light_dark:hover{
+  background-color: rgb(35, 35, 35);
 }
 
+.Aurora_container .main_content .Chat_head .chat_info{
+  color: #E5E7EB; 
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 8px;
+  transition: background-color 0.2s ease;
+}
+.Aurora_container .main_content .Chat_head .chat_info:hover{
+  background-color: rgb(35, 35, 35);
+}
+.Aurora_container .main_content .chat_footer{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  min-width: 75%;
+  max-width: 900px;
+  background-color: #101827;
+  border: 1px solid #2A3245;
+  padding: 0.3rem;
+  border-radius: 30px;
+}
+.Aurora_container .main_content .chat_footer .Input_message{
+  display: flex;
+  align-items: center;
+}
+.Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn{
+  margin-left: 5px;
+  border-radius: 50%;
+  padding: 12px 22px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+.Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn:hover{
+  cursor: pointer;
+  background-color: rgb(35, 35, 35);
+}
+.Aurora_container .main_content .chat_footer .Input_message .user_query{
+  height: 45px;
+  min-width: 730px;
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+
+}
+.Aurora_container .main_content .chat_footer .Input_message .user_query::placeholder{
+  font-size: 18px;
+}
+.Aurora_container .main_content .chat_footer .Input_message #Send_btn{
+  border-radius: 50%;
+  padding: 12px 22px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aurora_container .main_content .chat_footer .Input_message #Send_btn:hover{
+  cursor: pointer;
+  background-color: rgb(35, 35, 35);
+}
