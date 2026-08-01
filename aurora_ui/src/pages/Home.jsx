@@ -2,6 +2,7 @@ import "../styles/home.css";
 import logo from "../assets/img/AuroraLogo.png";
 import LogoIcon from "../assets/img/AuroraIcon.png";
 import { Link } from "react-router-dom";
+import "../js/project.js"
 
 function Home() {
   return (
@@ -11,40 +12,40 @@ function Home() {
           <div className="sidebar_header">
             <div className="aurora_icon">
               <img src={LogoIcon} alt="AuroraIcon" />
-              <p className="platform_name">Aurora</p>
+              <p className="platform_name hide_text">Aurora</p>
             </div>
             <div className="sidebar_icon">
               <i className="fa-solid fa-bars"></i>
             </div>
           </div>
-          <div className="new_chat">
+          <div className="new_chat hide_bg">
             <i className="fa-regular fa-pen-to-square"></i>
-            <p>New Chat</p>
+            <p className="hide_text">New Chat </p>
           </div>
           <div className="sidebar_menu">
-            <div className="menu active" id="home_section">
+            <div className="menu hide_bg active" id="home_section">
               <i className="fa-regular fa-house"></i>
-              <Link to="./home" className="home-btn">
+              <Link to="./home" className="home-btn hide_text">
                 Home
               </Link>
             </div>
-            <div className="menu" id="about_section">
+            {/* <div className="menu" id="about_section">
               <i className="fa-solid fa-circle-info"></i>
-              <Link to="./about" className="about-btn">
+              <Link to="./about" className="about-btn hide_text">
                 About Us
               </Link>
             </div>
             <div className="menu" id="contact_section">
               <i className="fa-regular fa-comment"></i>
-              <Link to="./contact" className="contact-btn">
+              <Link to="./contact" className="contact-btn hide_text">
                 Contact Us
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="sidebar_footer">
             <div className="user_info">
               <p className="username_Letter">A</p>
-              <div className="userName">Ayush Gholap</div>
+              <div className="userName hide_text">Ayush Gholap</div>
             </div>
           </div>
         </div>
@@ -57,12 +58,100 @@ function Home() {
               <i className="fa-solid fa-ellipsis"></i>
             </div>
           </div>
+          <div className="chat_container">
+            <div className="bot_message">
+              <div className="message_content">
+                <h3>Hello!</h3>
+                <p>
+                  I'm Aurora, your government scheme assistant.
+                  <br />
+                  I can help you find government schemes,check eligibility,
+                  <br />
+                  required documents,benefits,application process and much more.
+                  <br />
+                  How can I assist you today?
+                </p>
+                <span className="msg_time">10:30 AM</span>
+              </div>
+            </div>
+            <div className="user_message">
+              <div className="message_content">
+                <p>What is PM Kisan Yojana?</p>
+                <span className="msg_time">10:35 AM</span>
+              </div>
+            </div>
+            <div className="bot_message">
+              <div className="message_content">
+                <h3>Hello!</h3>
+                <p>
+                  I'm Aurora, your government scheme assistant.
+                  <br />
+                  I can help you find government schemes,check eligibility,
+                  <br />
+                  required documents,benefits,application process and much more.
+                  <br />
+                  How can I assist you today?
+                </p>
+                <span className="msg_time">10:30 AM</span>
+              </div>
+            </div>
+            <div className="user_message">
+              <div className="message_content">
+                <p>What is PM Kisan Yojana?</p>
+                <span className="msg_time">10:35 AM</span>
+              </div>
+            </div>
+            <div className="bot_message">
+              <div className="message_content">
+                <h3>Hello!</h3>
+                <p>
+                  I'm Aurora, your government scheme assistant.
+                  <br />
+                  I can help you find government schemes,check eligibility,
+                  <br />
+                  required documents,benefits,application process and much more.
+                  <br />
+                  How can I assist you today?
+                </p>
+                <span className="msg_time">10:30 AM</span>
+              </div>
+            </div>
+            <div className="user_message">
+              <div className="message_content">
+                <p>What is PM Kisan Yojana?</p>
+                <span className="msg_time">10:35 AM</span>
+              </div>
+            </div>
+            <div className="bot_message">
+              <div className="message_content">
+                <h3>Hello!</h3>
+                <p>
+                  I'm Aurora, your government scheme assistant.
+                  <br />
+                  I can help you find government schemes,check eligibility,
+                  <br />
+                  required documents,benefits,application process and much more.
+                  <br />
+                  How can I assist you today?
+                </p>
+                <span className="msg_time">10:30 AM</span>
+              </div>
+            </div>
+            <div className="user_message">
+              <div className="message_content">
+                <p>What is PM Kisan Yojana?</p>
+                <span className="msg_time">10:35 AM</span>
+              </div>
+            </div>
+          </div>
           <div className="chat_footer">
             <div className="Input_message">
               <i className="fa-solid fa-plus" id="Input_filesbtn"></i>
-              <input type="text"
-              placeholder="Ask Aurora"
-              className="user_query"
+              <input
+                type="text"
+                placeholder="Ask Aurora.."
+                id="user_input"
+                className="user_query"
               />
               <i className="fa-solid fa-arrow-up" id="Send_btn"></i>
             </div>
