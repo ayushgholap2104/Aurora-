@@ -68,11 +68,12 @@
   border-radius: 10px;
   cursor: pointer;
   color: #E5E7EB;
+  min-height: 45px;
 }
 
 .Aurora_container .Sidebar_container .new_chat i {
   font-size: 17px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 .Aurora_container .Sidebar_container .new_chat p {
   font-weight: 400;
@@ -94,7 +95,9 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  min-height: 45px;
 }
+
 .Aurora_container .Sidebar_container .sidebar_menu .menu:hover {
   background-color:#1D213C;
 }
@@ -103,7 +106,7 @@
 }
 .Aurora_container .Sidebar_container .sidebar_menu .menu i {
   font-size: 17px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
   color: #E5E7EB;
 }
 .Aurora_container .Sidebar_container .sidebar_menu .menu a {

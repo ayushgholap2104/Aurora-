@@ -23,7 +23,7 @@ function Home() {
             <p className="hide_text">New Chat </p>
           </div>
           <div className="sidebar_menu">
-            <div className="menu hide_bg active" id="home_section">
+            <div className="menu  active hide_bg" id="home_section">
               <i className="fa-regular fa-house"></i>
               <Link to="./home" className="home-btn hide_text">
                 Home
