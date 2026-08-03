@@ -31,4 +31,15 @@ function sidebarClick() {
     sidebarContainer.classList.toggle('active')
   })
 
+  // auroraIcon.addEventListener('mouseenter',()=>{
+  //   sidebarContainer.style.justifyContent = 'center';
+  //   auroraIcon.style.display = 'none';
+  //   sidebarIcon.style.display = 'block';
+  // })
+  // auroraIcon.addEventListener('mouseleave',()=>{
+  //   sidebarContainer.style.justifyContent = 'center';
+  //   auroraIcon.style.display = 'flex';
+  //   sidebarIcon.style.display = 'none';
+  // })
+
 }

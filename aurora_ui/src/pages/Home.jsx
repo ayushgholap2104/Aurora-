@@ -2,9 +2,13 @@ import "../styles/home.css";
 import logo from "../assets/img/AuroraLogo.png";
 import LogoIcon from "../assets/img/AuroraIcon.png";
 import { Link } from "react-router-dom";
-import "../js/project.js"
+import { useState } from "react";
 
+const sidebarClick = () =>{
+  setisSidebaropen(prev => !prev)
+}
 function Home() {
+  const [isSidebarOpen,setIsSidebarOpen] = useState(true)
   return (
     <>
       <div className="Aurora_container">
@@ -14,7 +18,10 @@ function Home() {
               <img src={LogoIcon} alt="AuroraIcon" />
               <p className="platform_name hide_text">Aurora</p>
             </div>
-            <div className="sidebar_icon">
+            <div 
+            className="sidebar_icon"
+            onClick={sidebarClick}
+            >
               <i className="fa-solid fa-bars"></i>
             </div>
           </div>
