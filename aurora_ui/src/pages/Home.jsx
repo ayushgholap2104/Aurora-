@@ -4,37 +4,45 @@ import LogoIcon from "../assets/img/AuroraIcon.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const sidebarClick = () =>{
-  setisSidebaropen(prev => !prev)
-}
 function Home() {
-  const [isSidebarOpen,setIsSidebarOpen] = useState(true)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const sidebarClick = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
   return (
     <>
       <div className="Aurora_container">
-        <div className="Sidebar_container">
-          <div className="sidebar_header">
-            <div className="aurora_icon">
+        <div className={`Sidebar_container ${!isSidebarOpen ? "active" : ""}`}>
+          <div className={`sidebar_header ${!isSidebarOpen ? "collapse" : ""}`}>
+            <div
+              className="aurora_icon"
+            >
               <img src={LogoIcon} alt="AuroraIcon" />
-              <p className="platform_name hide_text">Aurora</p>
+              {isSidebarOpen && <p className="platform_name">Aurora</p>}
             </div>
-            <div 
-            className="sidebar_icon"
-            onClick={sidebarClick}
+            <div
+              className={`sidebar_icon ${!isSidebarOpen ? "collapse" : ""}`}
+              onClick={sidebarClick}
             >
               <i className="fa-solid fa-bars"></i>
             </div>
           </div>
-          <div className="new_chat hide_bg">
+          <div className={`new_chat ${!isSidebarOpen ? "collapse" : ""}`}>
             <i className="fa-regular fa-pen-to-square"></i>
-            <p className="hide_text">New Chat </p>
+            {isSidebarOpen && <p className="hide_text">New Chat </p>}
           </div>
           <div className="sidebar_menu">
-            <div className="menu  active hide_bg" id="home_section">
+            <div
+              className={`menu active ${!isSidebarOpen ? "collapse" : ""}`}
+              id="home_section"
+            >
               <i className="fa-regular fa-house"></i>
-              <Link to="./home" className="home-btn hide_text">
-                Home
-              </Link>
+              {isSidebarOpen && (
+                <Link to="./home" className="home-btn">
+                  Home
+                </Link>
+              )}
             </div>
             {/* <div className="menu" id="about_section">
               <i className="fa-solid fa-circle-info"></i>

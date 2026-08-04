@@ -10,9 +10,17 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: width 0.2s ease;
 }
 .Aurora_container .Sidebar_container.active{
   width: 65px;
+  cursor:e-resize;
+}
+.Aurora_container .Sidebar_container.active:hover .sidebar_icon{
+  display: block;
+}
+.Aurora_container .Sidebar_container.active:hover .aurora_icon{
+  display: none;
 }
 
 
@@ -23,6 +31,12 @@
   align-items: center;
   padding-top: 5px;
 }
+.Aurora_container .Sidebar_container .sidebar_header.collapse{
+  justify-content: center;
+  height: 55px;
+  position: relative;
+}
+
 .Aurora_container .sidebar_header .aurora_icon {
   height: 55px;
   width: 50px;
@@ -31,6 +45,7 @@
   gap: 5px;
   align-items: center;
   cursor: pointer;
+  transition:display 0.3s ease;
 }
 .Aurora_container .sidebar_header .aurora_icon p {
   font-size: 22px;
@@ -50,6 +65,13 @@
   border-radius: 10px;
   padding: 5px 8px;
   transition: background-color 0.2s ease;
+  height: 40px;
+  width: 40px;
+
+}
+.Aurora_container .sidebar_header .sidebar_icon.collapse{
+  margin-right: 0px;
+  display: none;
 }
 .Aurora_container .sidebar_header .sidebar_icon:hover {
   background-color: rgb(35, 35, 35);
@@ -69,6 +91,19 @@
   cursor: pointer;
   color: #E5E7EB;
   min-height: 45px;
+}
+.Aurora_container .Sidebar_container .new_chat:hover{
+  background-color:#1D213C;
+}
+.Aurora_container .Sidebar_container .new_chat.collapse{
+  background: none;
+  padding: 0;
+  min-width: 45px;
+  justify-content: center;
+  transition:0.2s ease;
+}
+.Aurora_container .Sidebar_container .new_chat.collapse:hover{
+  background-color:#1D213C;
 }
 
 .Aurora_container .Sidebar_container .new_chat i {
@@ -96,14 +131,22 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
   min-height: 45px;
+  background-color:#1D213C;
+}
+.Aurora_container .Sidebar_container .sidebar_menu .menu.collapse{
+  background: none;
+  padding: 0;
+  min-width: 45px;
+  justify-content: center;
+  transition:0.2s ease;
+}
+.Aurora_container .Sidebar_container .sidebar_menu .menu.collapse:hover{
+  background-color:#1D213C;
+}
+.Aurora_container .Sidebar_container .sidebar_menu .menu.active{
+  background-color:#1D213C;
 }
 
-.Aurora_container .Sidebar_container .sidebar_menu .menu:hover {
-  background-color:#1D213C;
-}
-.Aurora_container .Sidebar_container .sidebar_menu .menu.active {
-  background-color:#1D213C;
-}
 .Aurora_container .Sidebar_container .sidebar_menu .menu i {
   font-size: 17px;
   /* margin-left: 5px; */
