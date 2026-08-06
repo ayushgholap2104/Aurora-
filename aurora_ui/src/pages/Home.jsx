@@ -16,7 +16,7 @@ function Home() {
         <div className={`Sidebar_container ${!isSidebarOpen ? "active" : ""}`}>
           <div className={`sidebar_header ${!isSidebarOpen ? "collapse" : ""}`}>
             <div
-              className="aurora_icon"
+              className={`aurora_icon ${!isSidebarOpen ? "collapse" : ""}`}
             >
               <img src={LogoIcon} alt="AuroraIcon" />
               {isSidebarOpen && <p className="platform_name">Aurora</p>}
@@ -60,7 +60,7 @@ function Home() {
           <div className="sidebar_footer">
             <div className="user_info">
               <p className="username_Letter">A</p>
-              <div className="userName hide_text">Ayush Gholap</div>
+              {isSidebarOpen &&<div className="userName hide_text">Ayush Gholap</div>}
             </div>
           </div>
         </div>
@@ -79,9 +79,7 @@ function Home() {
                 <h3>Hello!</h3>
                 <p>
                   I'm Aurora, your government scheme assistant.
-                  <br />
                   I can help you find government schemes,check eligibility,
-                  <br />
                   required documents,benefits,application process and much more.
                   <br />
                   How can I assist you today?
@@ -100,9 +98,7 @@ function Home() {
                 <h3>Hello!</h3>
                 <p>
                   I'm Aurora, your government scheme assistant.
-                  <br />
                   I can help you find government schemes,check eligibility,
-                  <br />
                   required documents,benefits,application process and much more.
                   <br />
                   How can I assist you today?
@@ -121,9 +117,7 @@ function Home() {
                 <h3>Hello!</h3>
                 <p>
                   I'm Aurora, your government scheme assistant.
-                  <br />
                   I can help you find government schemes,check eligibility,
-                  <br />
                   required documents,benefits,application process and much more.
                   <br />
                   How can I assist you today?
@@ -142,9 +136,7 @@ function Home() {
                 <h3>Hello!</h3>
                 <p>
                   I'm Aurora, your government scheme assistant.
-                  <br />
                   I can help you find government schemes,check eligibility,
-                  <br />
                   required documents,benefits,application process and much more.
                   <br />
                   How can I assist you today?
