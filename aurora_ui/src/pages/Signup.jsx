@@ -52,7 +52,7 @@ function Signup() {
               </button>
             </div>
             <p>
-              Already have an account? <Link to="./login">Sign in</Link>
+              Already have an account? <Link to="./Home">Sign in</Link>
             </p>
           </div>
         </form>
