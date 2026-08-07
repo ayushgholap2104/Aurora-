@@ -146,7 +146,7 @@ function Home() {
             </div>
             <div className="user_message">
               <div className="message_content">
-                <p>What is PM Kisan Yojana?</p>
+                <p>What is PM Kisan Yojana? hello my name is ayush gholap currently pursuing datascience and Ai in RJ college</p>
                 <span className="msg_time">10:35 AM</span>
               </div>
             </div>
