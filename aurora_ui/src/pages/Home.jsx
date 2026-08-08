@@ -15,9 +15,7 @@ function Home() {
       <div className="Aurora_container">
         <div className={`Sidebar_container ${!isSidebarOpen ? "active" : ""}`}>
           <div className={`sidebar_header ${!isSidebarOpen ? "collapse" : ""}`}>
-            <div
-              className={`aurora_icon ${!isSidebarOpen ? "collapse" : ""}`}
-            >
+            <div className={`aurora_icon ${!isSidebarOpen ? "collapse" : ""}`}>
               <img src={LogoIcon} alt="AuroraIcon" />
               {isSidebarOpen && <p className="platform_name">Aurora</p>}
             </div>
@@ -60,17 +58,23 @@ function Home() {
           <div className="sidebar_footer">
             <div className="user_info">
               <p className="username_Letter">A</p>
-              {isSidebarOpen &&<div className="userName hide_text">Ayush Gholap</div>}
+              {isSidebarOpen && (
+                <div className="userName hide_text">Ayush Gholap</div>
+              )}
             </div>
           </div>
         </div>
         <main className="main_content">
           <div className="Chat_head">
-            <div className="light_dark">
-              <i className="fa-regular fa-moon"></i>
+            <div
+              className={`sidebar_icon ${!isSidebarOpen ? "collapse" : ""}`}
+              onClick={sidebarClick}
+            >
+              <i className="fa-solid fa-bars"></i>
             </div>
-            <div className="chat_info">
-              <i className="fa-solid fa-ellipsis"></i>
+            <div className="chat_head_rightItems">
+              <i className="fa-regular fa-moon" id="light_dark"></i>
+              <i className="fa-solid fa-ellipsis" id="chat_info"></i>
             </div>
           </div>
           <div className="chat_container">
@@ -78,9 +82,9 @@ function Home() {
               <div className="message_content">
                 <h3>Hello!</h3>
                 <p>
-                  I'm Aurora, your government scheme assistant.
-                  I can help you find government schemes,check eligibility,
-                  required documents,benefits,application process and much more.
+                  I'm Aurora, your government scheme assistant. I can help you
+                  find government schemes,check eligibility, required
+                  documents,benefits,application process and much more.
                   <br />
                   How can I assist you today?
                 </p>
@@ -97,9 +101,9 @@ function Home() {
               <div className="message_content">
                 <h3>Hello!</h3>
                 <p>
-                  I'm Aurora, your government scheme assistant.
-                  I can help you find government schemes,check eligibility,
-                  required documents,benefits,application process and much more.
+                  I'm Aurora, your government scheme assistant. I can help you
+                  find government schemes,check eligibility, required
+                  documents,benefits,application process and much more.
                   <br />
                   How can I assist you today?
                 </p>
@@ -116,9 +120,9 @@ function Home() {
               <div className="message_content">
                 <h3>Hello!</h3>
                 <p>
-                  I'm Aurora, your government scheme assistant.
-                  I can help you find government schemes,check eligibility,
-                  required documents,benefits,application process and much more.
+                  I'm Aurora, your government scheme assistant. I can help you
+                  find government schemes,check eligibility, required
+                  documents,benefits,application process and much more.
                   <br />
                   How can I assist you today?
                 </p>
@@ -135,9 +139,9 @@ function Home() {
               <div className="message_content">
                 <h3>Hello!</h3>
                 <p>
-                  I'm Aurora, your government scheme assistant.
-                  I can help you find government schemes,check eligibility,
-                  required documents,benefits,application process and much more.
+                  I'm Aurora, your government scheme assistant. I can help you
+                  find government schemes,check eligibility, required
+                  documents,benefits,application process and much more.
                   <br />
                   How can I assist you today?
                 </p>
@@ -146,7 +150,10 @@ function Home() {
             </div>
             <div className="user_message">
               <div className="message_content">
-                <p>What is PM Kisan Yojana? hello my name is ayush gholap currently pursuing datascience and Ai in RJ college</p>
+                <p>
+                  What is PM Kisan Yojana? hello my name is ayush gholap
+                  currently pursuing datascience and Ai in RJ college
+                </p>
                 <span className="msg_time">10:35 AM</span>
               </div>
             </div>
