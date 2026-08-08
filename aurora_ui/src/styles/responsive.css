@@ -11,26 +11,26 @@
     width: 120px;
   }
   .signup h2 {
-    font-size: 27px;
+    font-size: 28.5px;
   }
   #user-up i {
-    font-size: 22px;
+    font-size: 23.5px;
   }
   #user-up input {
     width: 200px;
-    font-size: 15px;
+    font-size: 15.5px;
     height: 43px;
   }
 
   #user-up input::placeholder {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   #btn {
-    font-size: 12.5px;
+    font-size: 13.5px;
   }
   .signup p {
-    font-size: 13px;
+    font-size: 13.5px;
   }
   /* For Sign in page */
   .signin {
@@ -43,10 +43,10 @@
     width: 120px;
   }
   .signin h2 {
-    font-size: 27px;
+    font-size: 28.5px;
   }
   .signin p {
-    font-size: 12px;
+    font-size: 13.5px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -61,26 +61,26 @@
     width: 130px;
   }
   .signup h2 {
-    font-size: 28px;
+    font-size: 29.5px;
   }
   #user-up i {
-    font-size: 23px;
+    font-size: 24.5px;
   }
   #user-up input {
     width: 240px;
-    font-size: 15px;
+    font-size: 15.5px;
     height: 43px;
   }
 
   #user-up input::placeholder {
-    font-size: 14px;
+    font-size: 14.5px;
   }
 
   #btn {
-    font-size: 13px;
+    font-size: 14.5px;
   }
   .signup p {
-    font-size: 13.5px;
+    font-size: 14px;
   }
   /* For Sign in page */
   .signin {
@@ -93,10 +93,10 @@
     width: 130px;
   }
   .signin h2 {
-    font-size: 28px;
+    font-size: 30px;
   }
   .signin p {
-    font-size: 12.5px;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -106,30 +106,30 @@
     min-height: 500px;
   }
   .signup h2 {
-    font-size: 29px;
+    font-size: 30.5px;
   }
   .signup .Aurora_logo {
     height: 55px;
     width: 140px;
   }
   #user-up i {
-    font-size: 24px;
+    font-size: 25.5px;
   }
   #user-up input {
     width: 260px;
-    font-size: 15.5px;
+    font-size: 16.5px;
     height: 44px;
   }
 
   #user-up input::placeholder {
-    font-size: 14.5px;
+    font-size: 15.5px;
   }
 
   #btn {
-    font-size: 13.5px;
+    font-size: 15.5px;
   }
   .signup p {
-    font-size: 14px;
+    font-size: 14.5px;
   }
   /* For Sign in page */
   .signin {
@@ -142,10 +142,10 @@
     width: 140px;
   }
   .signin h2 {
-    font-size: 29px;
+    font-size: 30.5px;
   }
   .signin p {
-    font-size: 13px;
+    font-size: 14.5px;
   }
 }
 @media only screen and (max-width: 960px) {

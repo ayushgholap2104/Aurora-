@@ -52,7 +52,7 @@
   background-color: #ffffff;
 }
 #user-up i {
-  font-size: 26px;
+  font-size: 26px !important;
   color: #5a00b5;
   margin-left: 20px;
 }

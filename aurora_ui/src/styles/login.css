@@ -39,7 +39,7 @@
 }
 .signin h2 {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 31px;
 }
 #user-up {
   align-items: center;
@@ -54,7 +54,7 @@
   background-color: #ffffff;
 }
 #user-up i {
-  font-size: 25px;
+  font-size: 26px !important;
   color: #5a00b5;
   margin-left: 20px;
 }
@@ -64,18 +64,18 @@
   border: none;
   box-shadow: none;
   outline: none;
-  font-size: 17px;
+  font-size: 18px;
   /* color: transparent; */
 }
 #user-up input::placeholder {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 #btn {
   padding: 12px 40px;
   /* width: 170px; */
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 5px;
   color: #ffffff;
   background-color: #5a00b5;
@@ -87,7 +87,7 @@
   background-color:  #45018a;
 }
 .signin p {
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: gray;
 }
 .signin p a {
