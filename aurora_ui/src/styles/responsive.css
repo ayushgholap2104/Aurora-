@@ -14,7 +14,7 @@
     font-size: 28.5px;
   }
   #user-up i {
-    font-size: 23.5px;
+    font-size: 23.5px !important;
   }
   #user-up input {
     width: 200px;
@@ -64,7 +64,7 @@
     font-size: 29.5px;
   }
   #user-up i {
-    font-size: 24.5px;
+    font-size: 24.5px !important;
   }
   #user-up input {
     width: 240px;
@@ -113,7 +113,7 @@
     width: 140px;
   }
   #user-up i {
-    font-size: 25.5px;
+    font-size: 25.5px !important;
   }
   #user-up input {
     width: 260px;
