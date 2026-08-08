@@ -267,7 +267,7 @@
   background-color: rgb(35, 35, 35);
 }
 .Aurora_container .main_content .chat_container {
-  height: 84vh;
+  height: 100vh;
   padding: 1rem 4rem 4rem 4rem ;
   width: 100%;
   display: flex;
