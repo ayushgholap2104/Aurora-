@@ -36,7 +36,7 @@
 }
 .signup h2 {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 31px;
   /* margin-top: 10px; */
 }
 #user-up {
@@ -52,7 +52,7 @@
   background-color: #ffffff;
 }
 #user-up i {
-  font-size: 25px;
+  font-size: 26px;
   color: #5a00b5;
   margin-left: 20px;
 }
@@ -62,11 +62,11 @@
   border: none;
   box-shadow: none;
   outline: none;
-  font-size: 16px;
+  font-size: 17px;
   /* color: transparent; */
 }
 #user-up input::placeholder {
-  font-size: 15px;
+  font-size: 16px;
 }
 .signup #name{
   text-transform: capitalize;
@@ -76,7 +76,7 @@
   padding: 12px 40px;
   /* width: 170px; */
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 5px;
   color: #ffffff;
   background-color: #5a00b5;
@@ -88,7 +88,7 @@
   background-color:  #45018a;
 }
 .signup p {
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: gray;
 }
 .signup p a {
