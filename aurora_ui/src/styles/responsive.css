@@ -159,8 +159,13 @@
   .Aurora_container .main_content .Chat_head {
     justify-content: space-between;
   }
+
   .Aurora_container .main_content .Chat_head .sidebar_icon {
     display: block;
+    background-color: rgb(35, 35, 35);
+  }
+  .Aurora_container .main_content .Chat_head .chat_head_rightItems i {
+    background-color: rgb(35, 35, 35);
   }
   .Aurora_container .main_content .chat_container .bot_message {
     width: 450px;
@@ -247,7 +252,7 @@
 }
 @media only screen and (max-width: 580px) {
   .Aurora_container .main_content .chat_container {
-    padding: 0rem 0rem 4rem 0rem;
+    padding: 0rem;
     align-items: center;
   }
   .Aurora_container .main_content .chat_container .bot_message {

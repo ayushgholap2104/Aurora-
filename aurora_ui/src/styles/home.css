@@ -212,6 +212,7 @@
   padding: 15px;
   gap: 20px;
   font-size: 20px;
+  background: transparent;
 }
 .Aurora_container .main_content .Chat_head .sidebar_icon {
   font-size: 20px;
@@ -266,7 +267,7 @@
   background-color: rgb(35, 35, 35);
 }
 .Aurora_container .main_content .chat_container {
-  height: 85vh;
+  height: 100vh;
   padding: 1rem 4rem 4rem 4rem ;
   width: 100%;
   display: flex;
