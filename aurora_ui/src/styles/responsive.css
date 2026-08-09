@@ -168,7 +168,7 @@
     background-color: rgb(35, 35, 35);
   }
   .Aurora_container .main_content .chat_container .bot_message .message_content {
-    width: 450px;
+    width: 500px;
   }
   .Aurora_container .main_content .chat_container .user_message .message_content {
     width: 350px;
