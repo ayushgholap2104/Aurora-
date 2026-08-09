@@ -205,7 +205,7 @@
   position: relative;
   flex-direction: column;
   display: flex;
-  height: 100vh;
+  height: 100dvh;
 }
 .Aurora_container .main_content .Chat_head {
   justify-content: flex-end;
