@@ -276,7 +276,8 @@
   scrollbar-width: none;
   scroll-behavior: smooth;
   min-height: 0;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  height: 77vh;
 }
 .Aurora_container .main_content .chat_container .bot_message {
   display: flex;
@@ -365,7 +366,7 @@
   margin-left: auto;
 }
 .Aurora_container .main_content .chat_footer {
-  position: absolute;
+  /* position: absolute; */
   left: 50%;
   transform: translateX(-50%);
   bottom: 30px;
