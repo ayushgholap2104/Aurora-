@@ -203,6 +203,7 @@
   background-color: #090d18;
   position: relative;
   flex-direction: column;
+  display: flex;
 }
 .Aurora_container .main_content .Chat_head {
   justify-content: flex-end;
@@ -267,15 +268,14 @@
   background-color: rgb(35, 35, 35);
 }
 .Aurora_container .main_content .chat_container {
-  height: 84vh;
   padding: 1rem 4rem 4rem 4rem ;
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
+  min-height: 0;
 }
 .Aurora_container .main_content .chat_container .bot_message {
   display: flex;
@@ -375,6 +375,7 @@
   padding: 0.1rem;
   border-radius: 30px;
   transform-origin: 50% 50% 0px;
+  flex-shrink: 0;
 }
 .Aurora_container .main_content .chat_footer .Input_message {
   display: flex;
