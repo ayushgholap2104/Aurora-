@@ -192,7 +192,7 @@
 
 @media only screen and (max-width: 630px) {
   .Aurora_container .Sidebar_container {
-    width: 300px;
+    width: 310px;
   }
   .Aurora_container .main_content .Chat_head {
     font-size: 19px;
@@ -271,7 +271,7 @@
 }
 @media only screen and (max-width: 460px) {
   .Aurora_container .Sidebar_container {
-    width: 280px;
+    width: 300px;
   }
   .Aurora_container .main_content .chat_container .user_message .message_content {
     width: 250px;
@@ -321,7 +321,7 @@
 }
 @media only screen and (max-width: 390px) {
   .Aurora_container .Sidebar_container {
-    width: 260px;
+    width: 290px;
   }
   .Aurora_container .main_content .chat_container .user_message .message_content {
     width: 230px;
