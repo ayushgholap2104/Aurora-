@@ -276,6 +276,7 @@
   scrollbar-width: none;
   scroll-behavior: smooth;
   min-height: 0;
+  margin-bottom: 50px;
 }
 .Aurora_container .main_content .chat_container .bot_message {
   display: flex;
