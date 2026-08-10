@@ -245,7 +245,7 @@ body,
   display: flex;
   gap: 10px;
 }
-.Aurora_container .main_content .Chat_head .chat_head_rightItems #light_dark {
+.Aurora_container .main_content .Chat_head .chat_head_rightItems .light_dark {
   color: #e5e7eb;
   cursor: pointer;
   border-radius: 10px;
@@ -260,7 +260,7 @@ body,
   .main_content
   .Chat_head
   .chat_head_rightItems
-  #light_dark:hover {
+  .light_dark:hover {
   background-color: rgb(35, 35, 35);
 }
 

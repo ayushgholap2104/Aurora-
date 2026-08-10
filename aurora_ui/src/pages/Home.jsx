@@ -6,10 +6,16 @@ import { useState } from "react";
 
 function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const sidebarClick = () => {
     setIsSidebarOpen((prev) => !prev);
   };
+
+  const themeChange = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
   return (
     <>
       <div className="Aurora_container">
@@ -73,7 +79,19 @@ function Home() {
               <i className="fa-solid fa-bars"></i>
             </div>
             <div className="chat_head_rightItems">
-              <i className="fa-regular fa-moon" id="light_dark"></i>
+              {isDarkMode ? (
+                <i
+                  className="bi bi-moon-fill light_dark"
+                  id="dark_mode"
+                  onClick={themeChange}
+                ></i>
+              ) : (
+                <i
+                  className="bi bi-brightness-high-fill light_dark"
+                  id="light_mode"
+                  onClick={themeChange}
+                ></i>
+              )}
               <i className="fa-solid fa-ellipsis" id="chat_info"></i>
             </div>
           </div>
