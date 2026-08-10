@@ -398,7 +398,7 @@ body,
   margin-left: 5px;
   border-radius: 50%;
   height: 40px;
-  width: 45px;
+  width: 40px;
   transition: background-color 0.2s ease;
   display: flex;
   align-items: center;
@@ -436,7 +436,7 @@ body,
 .Aurora_container .main_content .chat_footer .Input_message #Send_btn {
   border-radius: 50%;
   height: 40px;
-  width: 45px;
+  width: 40px;
   color: #f8f5fd;
   display: flex;
   align-items: center;
