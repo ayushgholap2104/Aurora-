@@ -442,7 +442,7 @@ body,
   align-items: center;
   justify-content: center;
   font-size: 19px;
-  margin-right: 10px;
+  margin-right: 5px;
   flex-shrink: 0;
 }
 .Aurora_container .main_content .chat_footer .Input_message #Send_btn:hover {
