@@ -416,7 +416,7 @@ body,
   background-color: #6d38d6;
 }
 .Aurora_container .main_content .chat_footer .Input_message .user_query {
-  height: 50px;
+  height: 45px;
   width: 100%;
   outline: none;
   background: none;
