@@ -89,6 +89,7 @@
 .signin p {
   font-size: 14.5px;
   color: gray;
+  margin-bottom: 10px;
 }
 .signin p a {
   color: #5a00b5;
