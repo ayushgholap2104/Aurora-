@@ -243,11 +243,11 @@ body,
 }
 .Aurora_container .main_content {
   flex: 1;
-  /* background: #090d18; */
-  background-image: url(../assets/img/AuroraDarkBg.png);
+  background: #090d18;
+  /* background-image: url(../assets/img/AuroraDarkBg.png);
   background-size: cover;
   object-fit: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   position: relative;
   flex-direction: column;
   display: flex;
