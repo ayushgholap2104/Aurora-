@@ -1,6 +1,8 @@
 import "../styles/home.css";
 import logo from "../assets/img/AuroraLogo.png";
 import LogoIcon from "../assets/img/AuroraIcon.png";
+import AuroraDarkBg from "../assets/img/AuroraDarkBg.png"
+import AuroraWhiteBg from "../assets/img/AuroraWhiteBg.png"
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -19,7 +21,7 @@ function Home() {
   return (
     <>
       <div className="Aurora_container">
-        <div className={`Sidebar_container ${!isSidebarOpen ? "active" : ""}`}>
+        <div className={`Sidebar_container ${!isSidebarOpen ? "active" : ""} ${!isDarkMode ? "light":""}`}>
           <div className={`sidebar_header ${!isSidebarOpen ? "collapse" : ""}`}>
             <div className={`aurora_icon ${!isSidebarOpen ? "collapse" : ""}`}>
               <img src={LogoIcon} alt="AuroraIcon" />
@@ -70,7 +72,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <main className="main_content">
+        <main className={`main_content ${!isDarkMode ? "light":""}`}>
           <div className="Chat_head">
             <div
               className={`sidebar_icon ${!isSidebarOpen ? "collapse" : ""}`}
