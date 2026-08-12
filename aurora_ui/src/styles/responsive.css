@@ -213,8 +213,14 @@
     display: block;
     background-color: rgb(35, 35, 35);
   }
+  .Aurora_container .main_content.light .Chat_head .sidebar_icon {
+    background: #efefef;
+  }
   .Aurora_container .main_content .Chat_head .chat_head_rightItems i {
     background-color: rgb(35, 35, 35);
+  }
+  .Aurora_container .main_content.light .Chat_head .chat_head_rightItems i {
+    background: #efefef;
   }
   .Aurora_container .main_content .chat_container .bot_message .message_content {
     width: 500px;
