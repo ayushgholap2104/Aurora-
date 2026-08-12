@@ -404,7 +404,7 @@ body,
   .bot_message
   .message_content {
   background: rgba(238, 240, 248, 0.65);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   color: #000000;
 }
 .Aurora_container
