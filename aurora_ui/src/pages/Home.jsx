@@ -36,7 +36,7 @@ function Home() {
           </div>
           <div className={`new_chat ${!isSidebarOpen ? "collapse" : ""}`}>
             <i className="fa-regular fa-pen-to-square"></i>
-            {isSidebarOpen && <p className="hide_text">New Chat </p>}
+            {isSidebarOpen && <p className="hide_text">New chat </p>}
           </div>
           <div className="sidebar_menu">
             <div
