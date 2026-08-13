@@ -48,7 +48,7 @@
     font-size: 13.5px;
   }
 }
-@media (min-width: 391px) and (max-width: 480px)  {
+@media (min-width: 391px) and (max-width: 480px) {
   /* For Sign Up page */
   .signup {
     min-width: 360px;
@@ -222,10 +222,18 @@
   .Aurora_container .main_content.light .Chat_head .chat_head_rightItems i {
     background: #efefef;
   }
-  .Aurora_container .main_content .chat_container .bot_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .bot_message
+    .message_content {
     width: 500px;
   }
-  .Aurora_container .main_content .chat_container .user_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .user_message
+    .message_content {
     width: 350px;
   }
 }
@@ -234,10 +242,18 @@
   .Aurora_container .main_content {
     display: flex;
   }
-  .Aurora_container .main_content .chat_container .bot_message .message_content{
+  .Aurora_container
+    .main_content
+    .chat_container
+    .bot_message
+    .message_content {
     width: 500px;
   }
-  .Aurora_container .main_content .chat_container .user_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .user_message
+    .message_content {
     width: 400px;
   }
   .Aurora_container .Sidebar_container .sidebar_footer .user_info::before {
@@ -252,15 +268,23 @@
   .Aurora_container .main_content .Chat_head {
     font-size: 19px;
   }
-  .Aurora_container .main_content .chat_container .bot_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .bot_message
+    .message_content {
     width: 450px;
     font-size: 16px;
   }
-  .Aurora_container .main_content .chat_container .user_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .user_message
+    .message_content {
     width: 350px;
     font-size: 16px;
   }
-  
+
   .Aurora_container
     .main_content
     .chat_container
@@ -298,45 +322,71 @@
   .Aurora_container .main_content .chat_container {
     padding: 1rem 0rem 4rem 0rem;
   }
-  .Aurora_container .main_content .chat_container .bot_message{
+  .Aurora_container .main_content .chat_container .bot_message {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .Aurora_container .main_content .chat_container .user_message{
+  .Aurora_container .main_content .chat_container .user_message {
     width: 90%;
-    
   }
-  
-  .Aurora_container .main_content .chat_container .user_message .message_content {
+
+  .Aurora_container
+    .main_content
+    .chat_container
+    .user_message
+    .message_content {
     margin-left: auto;
   }
 }
 @media only screen and (max-width: 530px) {
-  .Aurora_container .main_content .chat_container .user_message{
+  .Aurora_container .main_content .chat_container .user_message {
     width: 90%;
   }
-  .Aurora_container .main_content .chat_container .user_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .user_message
+    .message_content {
     width: 300px;
   }
-  .Aurora_container .main_content .chat_container .bot_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .bot_message
+    .message_content {
     width: 400px;
   }
-  
+  .Aurora_container
+    .main_content
+    .chat_footer
+    .Input_message
+    .inputFilebtn
+    .fileUpload_container {
+    width: 260px;
+  }
 }
 @media only screen and (max-width: 460px) {
   .Aurora_container .Sidebar_container {
     width: 300px;
   }
-  .Aurora_container .main_content .chat_container .user_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .user_message
+    .message_content {
     width: 250px;
     font-size: 15px;
   }
-  .Aurora_container .main_content .chat_container .bot_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .bot_message
+    .message_content {
     width: 350px;
     font-size: 15px;
   }
-  
+
   .Aurora_container .main_content .Chat_head {
     font-size: 18px;
   }
@@ -356,6 +406,14 @@
     .message_content
     span {
     font-size: 11.5px;
+  }
+  .Aurora_container
+    .main_content
+    .chat_footer
+    .Input_message
+    .inputFilebtn
+    .fileUpload_container {
+    width: 250px;
   }
   /* .Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn {
     font-size: 16px;
@@ -378,11 +436,19 @@
   .Aurora_container .Sidebar_container {
     width: 290px;
   }
-  .Aurora_container .main_content .chat_container .user_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .user_message
+    .message_content {
     width: 230px;
     font-size: 14px;
   }
-  .Aurora_container .main_content .chat_container .bot_message .message_content {
+  .Aurora_container
+    .main_content
+    .chat_container
+    .bot_message
+    .message_content {
     width: 350px;
     font-size: 14px;
   }
@@ -406,6 +472,14 @@
     .message_content
     span {
     font-size: 10.5px;
+  }
+  .Aurora_container
+    .main_content
+    .chat_footer
+    .Input_message
+    .inputFilebtn
+    .fileUpload_container {
+    width: 230px;
   }
   /* .Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn {
     font-size: 15px;
