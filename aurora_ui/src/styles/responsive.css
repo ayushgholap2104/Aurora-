@@ -415,6 +415,26 @@
     .fileUpload_container {
     width: 250px;
   }
+  .Aurora_container
+    .main_content
+    .chat_footer
+    .Input_message
+    .inputFilebtn
+    .fileUpload_container
+    .fileUpload
+    i {
+    font-size: 19px;
+  }
+  .Aurora_container
+    .main_content
+    .chat_footer
+    .Input_message
+    .inputFilebtn
+    .fileUpload_container
+    .fileUpload
+    span {
+    font-size: 15px;
+  }
   /* .Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn {
     font-size: 16px;
   }
@@ -480,6 +500,26 @@
     .inputFilebtn
     .fileUpload_container {
     width: 230px;
+  }
+  .Aurora_container
+    .main_content
+    .chat_footer
+    .Input_message
+    .inputFilebtn
+    .fileUpload_container
+    .fileUpload
+    i {
+    font-size: 18px;
+  }
+  .Aurora_container
+    .main_content
+    .chat_footer
+    .Input_message
+    .inputFilebtn
+    .fileUpload_container
+    .fileUpload
+    span {
+    font-size: 14px;
   }
   /* .Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn {
     font-size: 15px;
