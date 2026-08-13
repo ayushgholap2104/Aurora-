@@ -414,6 +414,7 @@
     .inputFilebtn
     .fileUpload_container {
     width: 250px;
+    top: -75px;
   }
   .Aurora_container
     .main_content
@@ -500,6 +501,7 @@
     .inputFilebtn
     .fileUpload_container {
     width: 230px;
+
   }
   .Aurora_container
     .main_content
