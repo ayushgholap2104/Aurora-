@@ -523,7 +523,7 @@ body,
   border: 1px solid #e5e7eb;
   box-shadow: rgba(15, 23, 42, 0.08);
 }
-.Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn {
+.Aurora_container .main_content .chat_footer .Input_message #inputAddIcon {
   margin-left: 5px;
   border-radius: 50%;
   height: 35px;
@@ -536,14 +536,59 @@ body,
   font-size: 19px;
   flex-shrink: 0;
 }
-.Aurora_container .main_content.light .chat_footer .Input_message #Input_filesbtn {
+.Aurora_container .main_content.light .chat_footer .Input_message #inputAddIcon {
   color: #000000;
+}
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn{
+  position: relative;
+}
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container{
+  position: absolute;
+  top: -80px; 
+  width: 280px;
+  background-color: #101827; 
+  padding: 0.5rem;
+  left: 5px;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.Aurora_container .main_content.light .chat_footer .Input_message .inputFilebtn .fileUpload_container{
+  background: #fcfcfc;
+  color: #000000;
+}
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  /* padding: 10px; */
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  align-items: center;
+  transition: background-color 0.1s ease;
+}
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload:hover{
+  background: #1d213c;
+}
+.Aurora_container .main_content.light .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload:hover{
+  background: #efefef;
+}
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload i{
+  font-size: 20px;
+}
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload span{
+  font-size: 16px;
+}
+
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload input{
+  display: none;
 }
 .Aurora_container
   .main_content
   .chat_footer
   .Input_message
-  #Input_filesbtn:hover {
+  #inputAddIcon:hover {
   cursor: pointer;
   background-color: #6d38d6;
 }
@@ -551,7 +596,7 @@ body,
   .main_content.light
   .chat_footer
   .Input_message
-  #Input_filesbtn:hover {
+  #inputAddIcon:hover {
   background-color: #efefef;
 }
 .Aurora_container .main_content .chat_footer .Input_message .user_query {
