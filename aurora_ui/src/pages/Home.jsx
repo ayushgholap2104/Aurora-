@@ -96,7 +96,19 @@ function Home() {
                   onClick={themeChange}
                 ></i>
               )}
-              <i className="fa-solid fa-ellipsis" id="chat_info"></i>
+              <div className="chatBtnContainer">
+                <i className="fa-solid fa-ellipsis" id="chat_info"></i>
+                <div className="chatAction_container">
+                  <div className="fileShare chatAction">
+                    <i class="bi bi-upload"></i>
+                    <span>Share conversation</span>
+                  </div>
+                  <div className="fileDelete chatAction">
+                    <i class="bi bi-trash3"></i>
+                    <span>Delete</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="chat_container">
@@ -188,7 +200,7 @@ function Home() {
                   <div className="fileUpload">
                     <i className="bi bi-paperclip"></i>
                     <span>Add photos & files</span>
-                    <input type="file"/>
+                    <input type="file" />
                   </div>
                 </div>
               </div>

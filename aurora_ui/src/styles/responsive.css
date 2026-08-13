@@ -365,6 +365,9 @@
     .fileUpload_container {
     width: 260px;
   }
+  .Aurora_container .main_content .chatBtnContainer .chatAction_container {
+    width: 230px;
+  }
 }
 @media only screen and (max-width: 460px) {
   .Aurora_container .Sidebar_container {
@@ -390,6 +393,26 @@
   .Aurora_container .main_content .Chat_head {
     font-size: 18px;
   }
+  .Aurora_container .main_content .chatBtnContainer .chatAction_container {
+    width: 220px;
+  }
+  .Aurora_container
+    .main_content
+    .chatBtnContainer
+    .chatAction_container
+    .chatAction
+    i {
+    font-size: 19px;
+  }
+  .Aurora_container
+    .main_content
+    .chatBtnContainer
+    .chatAction_container
+    .chatAction
+    span {
+    font-size: 15px;
+  }
+
   .Aurora_container
     .main_content
     .chat_container
@@ -436,6 +459,7 @@
     span {
     font-size: 15px;
   }
+
   /* .Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn {
     font-size: 16px;
   }
@@ -477,6 +501,25 @@
   .Aurora_container .main_content .Chat_head {
     font-size: 17px;
   }
+  .Aurora_container .main_content .chatBtnContainer .chatAction_container {
+    width: 210px;
+  }
+  .Aurora_container
+    .main_content
+    .chatBtnContainer
+    .chatAction_container
+    .chatAction
+    i {
+    font-size: 18px;
+  }
+  .Aurora_container
+    .main_content
+    .chatBtnContainer
+    .chatAction_container
+    .chatAction
+    span {
+    font-size: 14px;
+  }
 
   .Aurora_container
     .main_content
@@ -501,7 +544,6 @@
     .inputFilebtn
     .fileUpload_container {
     width: 230px;
-
   }
   .Aurora_container
     .main_content

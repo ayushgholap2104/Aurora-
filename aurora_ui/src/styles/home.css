@@ -369,6 +369,53 @@ body,
 .Aurora_container .main_content.light .Chat_head #chat_info:hover {
   background-color: #efefef;
 }
+
+.Aurora_container .main_content .chatBtnContainer{
+  position: relative;
+}
+.Aurora_container .main_content .chatBtnContainer .chatAction_container{
+  position: absolute; 
+  width: 240px;
+  background-color: #101827; 
+  padding: 0.5rem;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  right: 0px;
+  top: 45px;
+  z-index: 100;
+}
+.Aurora_container .main_content.light .chatBtnContainer .chatAction_container{
+  background: #fcfcfc;
+  color: #000000;
+}
+.Aurora_container .main_content .chatBtnContainer .chatAction_container .chatAction{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  /* padding: 10px; */
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  align-items: center;
+  transition: background-color 0.1s ease;
+}
+.Aurora_container .main_content .chatBtnContainer .chatAction_container .chatAction:hover{
+  background: #1d213c;
+}
+.Aurora_container .main_content.light .chatBtnContainer .chatAction_container .chatAction:hover{
+  background: #efefef;
+}
+.Aurora_container .main_content .chatBtnContainer .chatAction_container .chatAction i{
+  font-size: 20px;
+  margin-left: 5px;
+  background-color: transparent !important;
+
+}
+.Aurora_container .main_content .chatBtnContainer .chatAction_container .chatAction span{
+  font-size: 16px;
+}
+
 .Aurora_container .main_content .chat_container {
   padding: 1rem 4rem 4rem 4rem;
   display: flex;
