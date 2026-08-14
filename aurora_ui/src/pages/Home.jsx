@@ -25,15 +25,15 @@ function Home() {
   const chatinfoClick = () => {
     setIsChatinfoOpen((prev) => !prev);
   };
-  const shareConversation = async() =>{
-    setIsChatinfoOpen(false)
-  }
-  const deleteConversation = () =>{
-    setIsChatinfoOpen(false)
-  }
-  const fileClick = () =>{
-    setIsUploadOpen(false)
-  }
+  const shareConversation = async () => {
+    setIsChatinfoOpen(false);
+  };
+  const deleteConversation = () => {
+    setIsChatinfoOpen(false);
+  };
+  const fileClick = () => {
+    setIsUploadOpen(false);
+  };
 
   return (
     <>
@@ -128,15 +128,17 @@ function Home() {
                 <div
                   className={`chatAction_container ${isChatinfoOpen ? "show" : ""}`}
                 >
-                  <div 
-                  className="fileShare chatAction"
-                  onClick={shareConversation}>
+                  <div
+                    className="fileShare chatAction"
+                    onClick={shareConversation}
+                  >
                     <i class="bi bi-upload"></i>
                     <span>Share conversation</span>
                   </div>
-                  <div 
-                  className="fileDelete chatAction"
-                  onClick={deleteConversation}>
+                  <div
+                    className="fileDelete chatAction"
+                    onClick={deleteConversation}
+                  >
                     <i class="bi bi-trash3"></i>
                     <span>Delete</span>
                   </div>
@@ -234,9 +236,8 @@ function Home() {
                   id="inputAddIcon"
                 ></i>
                 <div
-                onClick={fileClick}
-                  className={`fileUpload_container ${isUploadOpen ? "show" : ""}`
-                }
+                  onClick={fileClick}
+                  className={`fileUpload_container ${isUploadOpen ? "show" : ""}`}
                 >
                   <div className="fileUpload">
                     <i className="bi bi-paperclip"></i>
@@ -254,21 +255,22 @@ function Home() {
               <i className="fa-solid fa-arrow-up" id="Send_btn"></i>
             </div>
           </div>
-          <div class="precaution_container">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <div class="precaution_msg1">
-              Are you Sure?
-            </div>
-            <div class="precaution_msg2">
-              This action cannot be undone, Your chat will be permanently
-              deleted.
-            </div>
-            <div class="precaution_icons">
-              <button className="deleteChatbtn" type="button">Delete</button>
-              <button className="cancleChatbtn" type="button">Cancle</button>
-            </div>
-          </div>
         </main>
+        <div class="precaution_container">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <div class="precaution_msg1">Are you Sure?</div>
+          <div class="precaution_msg2">
+            This action cannot be undone, Your chat will be permanently deleted.
+          </div>
+          <div class="precaution_icons">
+            <button className="deleteChatbtn" type="button">
+              Delete
+            </button>
+            <button className="cancleChatbtn" type="button">
+              Cancle
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -197,6 +197,7 @@
     font-size: 14.5px;
   }
 }
+
 @media only screen and (max-width: 960px) {
   .Aurora_container .sidebarOverlay {
     display: block;
@@ -242,7 +243,7 @@
     .message_content {
     width: 350px;
   }
-  
+
   .Aurora_container .main_content .chat_footer .Input_message #inputAddIcon {
     background-color: #6d38d6;
   }
@@ -258,6 +259,27 @@
   }
   .Aurora_container .main_content.light .chat_footer .Input_message #Send_btn {
     background-color: #efefef;
+  }
+  .Aurora_container .precaution_container {
+    height: 380px;
+    width: 400px;
+  }
+  .Aurora_container .precaution_container i {
+    height: 45px;
+    width: 45px;
+    font-size: 21px;
+  }
+  .Aurora_container .precaution_container .precaution_msg1 {
+    font-size: 17px;
+  }
+  .Aurora_container .precaution_container .precaution_msg2 {
+    font-size: 15px;
+    width: 340px;
+  }
+  .Aurora_container .precaution_container .precaution_icons button {
+    height: 50px;
+    width: 320px;
+    font-size: 15px;
   }
 }
 
@@ -340,6 +362,25 @@
   .Aurora_container .main_content .chat_footer .Input_message #Send_btn {
     font-size: 18px;
   }
+  .Aurora_container .precaution_container {
+    height: 360px;
+    width: 370px;
+  }
+  .Aurora_container .precaution_container i {
+    font-size: 20px;
+  }
+  .Aurora_container .precaution_container .precaution_msg1 {
+    font-size: 16px;
+  }
+  .Aurora_container .precaution_container .precaution_msg2 {
+    font-size: 14px;
+    width: 320px;
+  }
+  .Aurora_container .precaution_container .precaution_icons button {
+    height: 50px;
+    width: 280px;
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 580px) {
   .Aurora_container .main_content .chat_container {
@@ -390,6 +431,27 @@
   }
   .Aurora_container .main_content .chatBtnContainer .chatAction_container {
     width: 230px;
+  }
+  .Aurora_container .precaution_container {
+    height: 340px;
+    width: 340px;
+  }
+  .Aurora_container .precaution_container i {
+    height: 45px;
+    width: 45px;
+    font-size: 19px;
+  }
+  .Aurora_container .precaution_container .precaution_msg1 {
+    font-size: 15px;
+  }
+  .Aurora_container .precaution_container .precaution_msg2 {
+    font-size: 13px;
+    width: 280px;
+  }
+  .Aurora_container .precaution_container .precaution_icons button {
+    height: 50px;
+    width: 260px;
+    font-size: 13px;
   }
 }
 @media only screen and (max-width: 460px) {
@@ -587,6 +649,26 @@
     .fileUpload
     span {
     font-size: 14px;
+  }
+  .Aurora_container .precaution_container {
+    height: 330px;
+    width: 300px;
+  }
+  .Aurora_container .precaution_container i {
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+  }
+  .Aurora_container .precaution_container .precaution_msg1 {
+    font-size: 14px;
+  }
+  .Aurora_container .precaution_container .precaution_msg2 {
+    font-size: 12.5px;
+    width: 260px;
+  }
+  .Aurora_container .precaution_container .precaution_icons button {
+    height: 50px;
+    width: 230px;
   }
   /* .Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn {
     font-size: 15px;

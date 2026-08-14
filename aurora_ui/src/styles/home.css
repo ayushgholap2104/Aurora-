@@ -834,12 +834,12 @@ body,
   cursor: pointer;
   background-color: #efefef;
 }
-.Aurora_container .main_content .precaution_container {
+.Aurora_container .precaution_container {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 320px;
+  height: 380px;
   background-color: #e8d0d0;
   /* background-color: #EAE0CF; */
   display: flex;
@@ -847,46 +847,46 @@ body,
   flex-direction: column;
   gap: 30px;
   justify-content: center;
-  width: 440px;
+  width: 420px;
   border-radius: 1rem;
   /* opacity: 0; */
-  transition:
+  /* transition:
     transform,
-    opacity 0.3s ease-in-out;
+    opacity 0.3s ease-in-out; */
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   /* z-index: -10; */
   text-align: center;
+  z-index: 1000;
 }
-.Aurora_container .main_content .precaution_container i {
+.Aurora_container .precaution_container i {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: pink;
+  background-color: rgb(255, 169, 182);
   display: flex;
   justify-content: center;
   align-items: center;
   color: red;
   font-size: 22px;
 }
-.Aurora_container .main_content .precaution_container .precaution_msg1 {
+.Aurora_container .precaution_container .precaution_msg1 {
   font-weight: 500;
   font-size: 18px;
 }
-.Aurora_container .main_content .precaution_container .precaution_msg2 {
+.Aurora_container .precaution_container .precaution_msg2 {
   font-weight: 400;
   font-size: 16px;
-  width: 400px;
-  max-width: 500px;
-  min-width: 300px;
+  width: 360px;
 }
-.Aurora_container .main_content .precaution_container .precaution_icons {
+.Aurora_container .precaution_container .precaution_icons {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 10px;
 }
-.Aurora_container .main_content .precaution_container .precaution_icons button {
+.Aurora_container .precaution_container .precaution_icons button {
   height: 50px;
-  width: 120px;
-  border-radius: 20px;
+  width: 350px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -895,9 +895,9 @@ body,
   font-size: 16px;
   cursor: pointer;
   font-weight: 400;
+
 }
 .Aurora_container
-  .main_content
   .precaution_container
   .precaution_icons
   .deleteChatbtn {
@@ -905,10 +905,9 @@ body,
   color: #fff;
 }
 .Aurora_container
-  .main_content
   .precaution_container
   .precaution_icons
   .cancleChatbtn {
-  background: #252b3a;
+  background: #252525;
   color: #e8eaf0;
 }
