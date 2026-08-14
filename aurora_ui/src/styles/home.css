@@ -370,13 +370,13 @@ body,
   background-color: #efefef;
 }
 
-.Aurora_container .main_content .chatBtnContainer{
+.Aurora_container .main_content .chatBtnContainer {
   position: relative;
 }
-.Aurora_container .main_content .chatBtnContainer .chatAction_container{
-  position: absolute; 
+.Aurora_container .main_content .chatBtnContainer .chatAction_container {
+  position: absolute;
   width: 240px;
-  background-color: #101827; 
+  background-color: #101827;
   padding: 0.5rem;
   border-radius: 15px;
   color: #fff;
@@ -386,21 +386,25 @@ body,
   z-index: 100;
   user-select: none;
   -webkit-user-select: none;
-  opacity:0 ;
+  opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.2s ease;
 }
-.Aurora_container .main_content .chatBtnContainer .chatAction_container.show{
+.Aurora_container .main_content .chatBtnContainer .chatAction_container.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
 }
-.Aurora_container .main_content.light .chatBtnContainer .chatAction_container{
+.Aurora_container .main_content.light .chatBtnContainer .chatAction_container {
   background: #fcfcfc;
   color: #000000;
 }
-.Aurora_container .main_content .chatBtnContainer .chatAction_container .chatAction{
+.Aurora_container
+  .main_content
+  .chatBtnContainer
+  .chatAction_container
+  .chatAction {
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -411,20 +415,65 @@ body,
   align-items: center;
   transition: background-color 0.1s ease;
 }
-.Aurora_container .main_content .chatBtnContainer .chatAction_container .chatAction:hover{
+.Aurora_container
+  .main_content
+  .chatBtnContainer
+  .chatAction_container
+  .fileShare:hover {
   background: #1d213c;
 }
-.Aurora_container .main_content.light .chatBtnContainer .chatAction_container .chatAction:hover{
+.Aurora_container
+  .main_content.light
+  .chatBtnContainer
+  .chatAction_container
+  .chatAction:hover {
   background: #efefef;
 }
-.Aurora_container .main_content .chatBtnContainer .chatAction_container .chatAction i{
+.Aurora_container
+  .main_content
+  .chatBtnContainer
+  .chatAction_container
+  .chatAction
+  i {
   font-size: 20px;
   margin-left: 5px;
   background-color: transparent !important;
-
 }
-.Aurora_container .main_content .chatBtnContainer .chatAction_container .chatAction span{
+.Aurora_container
+  .main_content
+  .chatBtnContainer
+  .chatAction_container
+  .chatAction
+  span {
   font-size: 16px;
+}
+.Aurora_container
+  .main_content
+  .chatBtnContainer
+  .chatAction_container
+  .fileDelete {
+  color: #fa423e;
+}
+.Aurora_container
+  .main_content
+  .chatBtnContainer
+  .chatAction_container
+  .fileDelete:hover {
+  background-color: #543736;
+}
+.Aurora_container
+  .main_content.light
+  .chatBtnContainer
+  .chatAction_container
+  .fileDelete {
+  color: #ef4444;
+}
+.Aurora_container
+  .main_content.light
+  .chatBtnContainer
+  .chatAction_container
+  .fileDelete:hover {
+  background: #fee2e2;
 }
 
 .Aurora_container .main_content .chat_container {
@@ -555,7 +604,7 @@ body,
   .user_message
   .message_content
   span {
-  color: #373737;;
+  color: #373737;
 }
 .Aurora_container .main_content .chat_footer {
   width: 100%;
@@ -576,7 +625,7 @@ body,
   max-width: 900px;
   flex-shrink: 0;
 }
-.Aurora_container .main_content.light .chat_footer .Input_message{
+.Aurora_container .main_content.light .chat_footer .Input_message {
   background: #fcfcfc;
   border: 1px solid #e5e7eb;
   box-shadow: rgba(15, 23, 42, 0.08);
@@ -594,17 +643,26 @@ body,
   font-size: 19px;
   flex-shrink: 0;
 }
-.Aurora_container .main_content.light .chat_footer .Input_message #inputAddIcon {
+.Aurora_container
+  .main_content.light
+  .chat_footer
+  .Input_message
+  #inputAddIcon {
   color: #000000;
 }
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn{
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn {
   position: relative;
 }
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container{
+.Aurora_container
+  .main_content
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container {
   position: absolute;
-  top: -80px; 
+  top: -80px;
   width: 280px;
-  background-color: #101827; 
+  background-color: #101827;
   padding: 0.5rem;
   left: 5px;
   border-radius: 15px;
@@ -612,21 +670,37 @@ body,
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   user-select: none;
   -webkit-user-select: none;
-  opacity:0 ;
+  opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.2s ease;
 }
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container.show{
+.Aurora_container
+  .main_content
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
 }
-.Aurora_container .main_content.light .chat_footer .Input_message .inputFilebtn .fileUpload_container{
+.Aurora_container
+  .main_content.light
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container {
   background: #fcfcfc;
   color: #000000;
 }
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload{
+.Aurora_container
+  .main_content
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container
+  .fileUpload {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -637,20 +711,53 @@ body,
   align-items: center;
   transition: background-color 0.1s ease;
 }
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload:hover{
+.Aurora_container
+  .main_content
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container
+  .fileUpload:hover {
   background: #1d213c;
 }
-.Aurora_container .main_content.light .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload:hover{
+.Aurora_container
+  .main_content.light
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container
+  .fileUpload:hover {
   background: #efefef;
 }
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload i{
+.Aurora_container
+  .main_content
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container
+  .fileUpload
+  i {
   font-size: 20px;
 }
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload span{
+.Aurora_container
+  .main_content
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container
+  .fileUpload
+  span {
   font-size: 16px;
 }
 
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container .fileUpload input{
+.Aurora_container
+  .main_content
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .fileUpload_container
+  .fileUpload
+  input {
   display: none;
 }
 .Aurora_container
@@ -678,7 +785,7 @@ body,
   color: #fff;
   padding-left: 5px;
 }
-.Aurora_container .main_content.light .chat_footer .Input_message .user_query{
+.Aurora_container .main_content.light .chat_footer .Input_message .user_query {
   color: #000000;
 }
 .Aurora_container
@@ -701,14 +808,18 @@ body,
   margin-right: 5px;
   flex-shrink: 0;
 }
-.Aurora_container .main_content.light .chat_footer .Input_message #Send_btn{
+.Aurora_container .main_content.light .chat_footer .Input_message #Send_btn {
   color: #000000;
 }
 .Aurora_container .main_content .chat_footer .Input_message #Send_btn:hover {
   cursor: pointer;
   background-color: #6d38d6;
 }
-.Aurora_container .main_content.light .chat_footer .Input_message #Send_btn:hover {
+.Aurora_container
+  .main_content.light
+  .chat_footer
+  .Input_message
+  #Send_btn:hover {
   cursor: pointer;
   background-color: #efefef;
 }
