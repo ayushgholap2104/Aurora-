@@ -205,6 +205,9 @@
   .Aurora_container .Sidebar_container.active {
     transform: translateX(-320px);
   }
+  .Aurora_container .Sidebar_container.light .new_chat {
+    background: rgba(238, 240, 248, 0.65);
+  }
   .Aurora_container .main_content .Chat_head {
     justify-content: space-between;
   }

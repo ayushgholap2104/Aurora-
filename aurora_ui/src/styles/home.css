@@ -116,9 +116,10 @@ body,
   cursor: pointer;
   color: #e5e7eb;
   min-height: 45px;
+  transition: background-color 0.2s ease;
 }
 .Aurora_container .Sidebar_container.light .new_chat {
-  background: none;
+  background: transparent;
   color: #000000;
 }
 .Aurora_container .Sidebar_container .new_chat:hover {
