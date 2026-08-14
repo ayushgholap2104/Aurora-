@@ -12,6 +12,13 @@ body,
   height: 100dvh;
   overflow: hidden;
 }
+.Aurora_container .sidebarOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 99;
+  display: none;
+}
 .Aurora_container .Sidebar_container {
   width: 320px;
   background: #0e1423;
@@ -22,7 +29,7 @@ body,
   transition: width 0.3s ease;
   flex-shrink: 0;
   overflow: hidden;
-  z-index: 999;
+  z-index: 100;
 }
 .Aurora_container .Sidebar_container.light {
   background: #fcfcfc;

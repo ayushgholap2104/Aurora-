@@ -198,6 +198,9 @@
   }
 }
 @media only screen and (max-width: 960px) {
+  .Aurora_container .sidebarOverlay {
+    display: block;
+  }
   .Aurora_container .Sidebar_container {
     position: fixed;
     z-index: 100;
@@ -238,6 +241,23 @@
     .user_message
     .message_content {
     width: 350px;
+  }
+  
+  .Aurora_container .main_content .chat_footer .Input_message #inputAddIcon {
+    background-color: #6d38d6;
+  }
+  .Aurora_container
+    .main_content.light
+    .chat_footer
+    .Input_message
+    #inputAddIcon {
+    background-color: #efefef;
+  }
+  .Aurora_container .main_content .chat_footer .Input_message #Send_btn {
+    background-color: #6d38d6;
+  }
+  .Aurora_container .main_content.light .chat_footer .Input_message #Send_btn {
+    background-color: #efefef;
   }
 }
 

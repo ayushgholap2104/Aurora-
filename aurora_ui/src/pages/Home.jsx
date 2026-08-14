@@ -25,10 +25,25 @@ function Home() {
   const chatinfoClick = () => {
     setIsChatinfoOpen((prev) => !prev);
   };
+  const shareConversation = async() =>{
+    setIsChatinfoOpen(false)
+  }
+  const deleteConversation = () =>{
+    setIsChatinfoOpen(false)
+  }
+  const fileClick = () =>{
+    setIsUploadOpen(false)
+  }
 
   return (
     <>
       <div className="Aurora_container">
+        {isSidebarOpen && (
+          <div
+            className="sidebarOverlay"
+            onClick={() => setIsSidebarOpen(false)}
+          ></div>
+        )}
         <div
           className={`Sidebar_container ${!isSidebarOpen ? "active" : ""} ${!isDarkMode ? "light" : ""}`}
         >
@@ -113,11 +128,15 @@ function Home() {
                 <div
                   className={`chatAction_container ${isChatinfoOpen ? "show" : ""}`}
                 >
-                  <div className="fileShare chatAction">
+                  <div 
+                  className="fileShare chatAction"
+                  onClick={shareConversation}>
                     <i class="bi bi-upload"></i>
                     <span>Share conversation</span>
                   </div>
-                  <div className="fileDelete chatAction">
+                  <div 
+                  className="fileDelete chatAction"
+                  onClick={deleteConversation}>
                     <i class="bi bi-trash3"></i>
                     <span>Delete</span>
                   </div>
@@ -214,7 +233,11 @@ function Home() {
                   className="fa-solid fa-plus"
                   id="inputAddIcon"
                 ></i>
-                <div className={`fileUpload_container ${isUploadOpen ? "show":""}`}>
+                <div
+                onClick={fileClick}
+                  className={`fileUpload_container ${isUploadOpen ? "show" : ""}`
+                }
+                >
                   <div className="fileUpload">
                     <i className="bi bi-paperclip"></i>
                     <span>Add photos & files</span>
