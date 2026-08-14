@@ -254,6 +254,20 @@ function Home() {
               <i className="fa-solid fa-arrow-up" id="Send_btn"></i>
             </div>
           </div>
+          <div class="precaution_container">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <div class="precaution_msg1">
+              Are you Sure?
+            </div>
+            <div class="precaution_msg2">
+              This action cannot be undone, Your chat will be permanently
+              deleted.
+            </div>
+            <div class="precaution_icons">
+              <button className="deleteChatbtn" type="button">Delete</button>
+              <button className="cancleChatbtn" type="button">Cancle</button>
+            </div>
+          </div>
         </main>
       </div>
     </>
