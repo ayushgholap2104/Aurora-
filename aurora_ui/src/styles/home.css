@@ -22,6 +22,7 @@ body,
   transition: width 0.3s ease;
   flex-shrink: 0;
   overflow: hidden;
+  z-index: 999;
 }
 .Aurora_container .Sidebar_container.light {
   background: #fcfcfc;
