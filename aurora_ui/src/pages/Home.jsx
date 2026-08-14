@@ -9,6 +9,8 @@ import { useState } from "react";
 function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isUploadOpen, setIsUploadOpen] = useState(false);
+  const [isChatinfoOpen, setIsChatinfoOpen] = useState(false);
 
   const sidebarClick = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -16,6 +18,12 @@ function Home() {
 
   const themeChange = () => {
     setIsDarkMode((prev) => !prev);
+  };
+  const uploadClick = () => {
+    setIsUploadOpen((prev) => !prev);
+  };
+  const chatinfoClick = () => {
+    setIsChatinfoOpen((prev) => !prev);
   };
 
   return (
@@ -97,8 +105,14 @@ function Home() {
                 ></i>
               )}
               <div className="chatBtnContainer">
-                <i className="fa-solid fa-ellipsis" id="chat_info"></i>
-                <div className="chatAction_container">
+                <i
+                  onClick={chatinfoClick}
+                  className="fa-solid fa-ellipsis"
+                  id="chat_info"
+                ></i>
+                <div
+                  className={`chatAction_container ${isChatinfoOpen ? "show" : ""}`}
+                >
                   <div className="fileShare chatAction">
                     <i class="bi bi-upload"></i>
                     <span>Share conversation</span>
@@ -195,8 +209,12 @@ function Home() {
           <div className="chat_footer">
             <div className="Input_message">
               <div className="inputFilebtn">
-                <i className="fa-solid fa-plus" id="inputAddIcon"></i>
-                <div className="fileUpload_container">
+                <i
+                  onClick={uploadClick}
+                  className="fa-solid fa-plus"
+                  id="inputAddIcon"
+                ></i>
+                <div className={`fileUpload_container ${isUploadOpen ? "show":""}`}>
                   <div className="fileUpload">
                     <i className="bi bi-paperclip"></i>
                     <span>Add photos & files</span>

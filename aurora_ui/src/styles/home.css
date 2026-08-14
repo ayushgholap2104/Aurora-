@@ -384,6 +384,17 @@ body,
   right: 0px;
   top: 45px;
   z-index: 100;
+  user-select: none;
+  -webkit-user-select: none;
+  opacity:0 ;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+.Aurora_container .main_content .chatBtnContainer .chatAction_container.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 .Aurora_container .main_content.light .chatBtnContainer .chatAction_container{
   background: #fcfcfc;
@@ -599,6 +610,17 @@ body,
   border-radius: 15px;
   color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  user-select: none;
+  -webkit-user-select: none;
+  opacity:0 ;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+}
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .fileUpload_container.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 .Aurora_container .main_content.light .chat_footer .Input_message .inputFilebtn .fileUpload_container{
   background: #fcfcfc;
