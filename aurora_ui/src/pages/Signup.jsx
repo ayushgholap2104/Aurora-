@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 import {useNavigate} from "react-router-dom"
 
 function Signup() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleSignup = () =>{
     navigate('./home')
   }

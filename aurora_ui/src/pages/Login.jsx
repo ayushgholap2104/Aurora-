@@ -3,6 +3,7 @@ import "../styles/login.css";
 import logo from "../assets/img/AuroraLogo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 function Login() {
   const navigate = useNavigate();
   const handleLogin = () => {
