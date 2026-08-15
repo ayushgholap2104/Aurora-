@@ -433,10 +433,10 @@
     width: 230px;
   }
   .Aurora_container .precaution_container {
-    height: 340px;
+    /* height: 340px; */
     width: 340px;
   }
-  .Aurora_container .precaution_container i {
+  /* .Aurora_container .precaution_container i {
     height: 45px;
     width: 45px;
     font-size: 19px;
@@ -452,7 +452,7 @@
     height: 50px;
     width: 260px;
     font-size: 13px;
-  }
+  } */
 }
 @media only screen and (max-width: 460px) {
   .Aurora_container .Sidebar_container {
@@ -651,20 +651,20 @@
     font-size: 14px;
   }
   .Aurora_container .precaution_container {
-    height: 330px;
+    height: 340px;
     width: 300px;
   }
   .Aurora_container .precaution_container i {
     height: 40px;
     width: 40px;
-    font-size: 18px;
+    font-size: 19px;
   }
   .Aurora_container .precaution_container .precaution_msg1 {
-    font-size: 14px;
+    font-size: 15px;
   }
   .Aurora_container .precaution_container .precaution_msg2 {
-    font-size: 12.5px;
-    width: 260px;
+    font-size: 13px;
+    width: 280px;
   }
   .Aurora_container .precaution_container .precaution_icons button {
     height: 50px;
