@@ -11,6 +11,8 @@ function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isUploadOpen, setIsUploadOpen] = useState(false);
   const [isChatinfoOpen, setIsChatinfoOpen] = useState(false);
+  const [isDeleteClick, setIsDeleteClick] = useState(false);
+  const [isPrecautionOpen, setIsPrecautionOpen] = useState(false);
 
   const sidebarClick = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -25,14 +27,18 @@ function Home() {
   const chatinfoClick = () => {
     setIsChatinfoOpen((prev) => !prev);
   };
-  const shareConversation = async () => {
+  const shareConversation = () => {
     setIsChatinfoOpen(false);
   };
   const deleteConversation = () => {
     setIsChatinfoOpen(false);
+    setIsDeleteClick(true);
   };
   const fileClick = () => {
     setIsUploadOpen(false);
+  };
+  const cancleDelete = () => {
+    setIsDeleteClick(false);
   };
 
   return (
@@ -132,14 +138,14 @@ function Home() {
                     className="fileShare chatAction"
                     onClick={shareConversation}
                   >
-                    <i class="bi bi-upload"></i>
+                    <i className="bi bi-upload"></i>
                     <span>Share conversation</span>
                   </div>
                   <div
                     className="fileDelete chatAction"
                     onClick={deleteConversation}
                   >
-                    <i class="bi bi-trash3"></i>
+                    <i className="bi bi-trash3"></i>
                     <span>Delete</span>
                   </div>
                 </div>
@@ -256,17 +262,27 @@ function Home() {
             </div>
           </div>
         </main>
-        <div class="precaution_container">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <div class="precaution_msg1">Are you Sure?</div>
-          <div class="precaution_msg2">
+        {isDeleteClick && (
+          <div
+            className="precautionOverlay"
+            onClick={() => setIsDeleteClick(false)}
+          ></div>
+        )}
+        <div className={`precaution_container ${isDeleteClick ? "show" : ""}`}>
+          <i className="fa-solid fa-triangle-exclamation"></i>
+          <div className="precaution_msg1">Are you Sure?</div>
+          <div className="precaution_msg2">
             This action cannot be undone, Your chat will be permanently deleted.
           </div>
-          <div class="precaution_icons">
+          <div className="precaution_icons">
             <button className="deleteChatbtn" type="button">
               Delete
             </button>
-            <button className="cancleChatbtn" type="button">
+            <button
+              onClick={cancleDelete}
+              className="cancleChatbtn"
+              type="button"
+            >
               Cancle
             </button>
           </div>

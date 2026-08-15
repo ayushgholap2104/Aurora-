@@ -834,6 +834,12 @@ body,
   cursor: pointer;
   background-color: #efefef;
 }
+.Aurora_container .precautionOverlay{
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: fixed;
+  z-index: 999;
+}
 .Aurora_container .precaution_container {
   position: fixed;
   top: 50%;
@@ -849,14 +855,18 @@ body,
   justify-content: center;
   width: 420px;
   border-radius: 1rem;
-  /* opacity: 0; */
-  /* transition:
-    transform,
-    opacity 0.3s ease-in-out; */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  /* z-index: -10; */
   text-align: center;
   z-index: 1000;
+  
+
+}
+.Aurora_container .precaution_container.show{
+  opacity: 1;
+  visibility: visible;
 }
 .Aurora_container .precaution_container i {
   height: 50px;
