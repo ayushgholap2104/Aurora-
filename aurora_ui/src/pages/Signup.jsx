@@ -2,8 +2,13 @@ import { useState } from "react";
 import "../styles/signup.css";
 import logo from "../assets/img/AuroraLogo.png"
 import {Link} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 function Signup() {
+  const navigate = useNavigate()
+  const handleSignup = () =>{
+    navigate('./Home')
+  }
   return (
     <>
       <main className="Sign_up">
@@ -47,7 +52,10 @@ function Signup() {
               />
             </div>
             <div className="create_button">
-              <button type="submit" id="btn">
+              <button 
+              onClick={handleSignup}
+              type="submit" 
+              id="btn">
                 Submit
               </button>
             </div>
