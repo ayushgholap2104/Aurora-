@@ -383,6 +383,12 @@ body,
 .Aurora_container .main_content .chatBtnContainer {
   position: relative;
 }
+.Aurora_container .main_content .chatBtnContainer .chatinfoOverlay{
+  background: rgba(0, 0, 0, 0.35);
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+}
 .Aurora_container .main_content .chatBtnContainer .chatAction_container {
   position: absolute;
   width: 240px;
@@ -400,6 +406,7 @@ body,
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.2s ease;
+  z-index: 50;
 }
 .Aurora_container .main_content .chatBtnContainer .chatAction_container.show {
   opacity: 1;
@@ -685,6 +692,7 @@ body,
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.2s ease;
+  z-index: 50;
 }
 .Aurora_container
   .main_content
