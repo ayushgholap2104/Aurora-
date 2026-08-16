@@ -6,6 +6,19 @@ import AuroraWhiteBg from "../assets/img/AuroraWhiteBg.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+const API_BASE_URL = "http://127.0.0.1:5000";
+
+const WELCOME_MESSAGE = {
+  sender: "bot",
+  greeting: "Hello!",
+  text: "I'm Aurora, your government scheme assistant. I can help you find government schemes, check eligibility, required documents, benefits, application process and much more.\nHow can I assist you today?",
+  time: "",
+};
+
+function formatTime() {
+  return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}
+
 function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -13,6 +26,13 @@ function Home() {
   const [isChatinfoOpen, setIsChatinfoOpen] = useState(false);
   const [isDeleteClick, setIsDeleteClick] = useState(false);
   const [isPrecautionOpen, setIsPrecautionOpen] = useState(false);
+
+  const [messages, setMessages] = useState([WELCOME_MESSAGE]);
+  const [userInput, setUserInput] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const storedUser = JSON.parse(localStorage.getItem("aurora_user") || "null");
+  const displayName = storedUser?.name || "Guest";
 
   const sidebarClick = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -40,6 +60,57 @@ function Home() {
   const cancleDelete = () => {
     setIsDeleteClick(false);
   };
+  const confirmDelete = () => {
+    setMessages([WELCOME_MESSAGE]);
+    setIsDeleteClick(false);
+  };
+
+  const handleSend = async () => {
+    const text = userInput.trim();
+    if (!text || isSending) return;
+
+    const newUserMessage = { sender: "user", text, time: formatTime() };
+    setMessages((prev) => [...prev, newUserMessage]);
+    setUserInput("");
+    setIsSending(true);
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", text: data.response, time: formatTime() },
+      ]);
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          sender: "bot",
+          text: `Sorry, I couldn't reach the server. (${err.message})`,
+          time: formatTime(),
+        },
+      ]);
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  const handleInputKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
 
   return (
     <>
@@ -65,7 +136,10 @@ function Home() {
               <i className="fa-solid fa-bars"></i>
             </div>
           </div>
-          <div className={`new_chat ${!isSidebarOpen ? "collapse" : ""}`}>
+          <div
+            className={`new_chat ${!isSidebarOpen ? "collapse" : ""}`}
+            onClick={confirmDelete}
+          >
             <i className="fa-regular fa-pen-to-square"></i>
             {isSidebarOpen && <p className="hide_text">New chat </p>}
           </div>
@@ -96,9 +170,9 @@ function Home() {
           </div>
           <div className="sidebar_footer">
             <div className="user_info">
-              <p className="username_Letter">A</p>
+              <p className="username_Letter">{displayName.charAt(0).toUpperCase()}</p>
               {isSidebarOpen && (
-                <div className="userName hide_text">Ayush Gholap</div>
+                <div className="userName hide_text">{displayName}</div>
               )}
             </div>
           </div>
@@ -153,85 +227,31 @@ function Home() {
             </div>
           </div>
           <div className="chat_container">
-            <div className="bot_message">
-              <div className="message_content">
-                <h3>Hello!</h3>
-                <p>
-                  I'm Aurora, your government scheme assistant. I can help you
-                  find government schemes,check eligibility, required
-                  documents,benefits,application process and much more.
-                  <br />
-                  How can I assist you today?
-                </p>
-                <span className="msg_time">10:30 AM</span>
+            {messages.map((msg, index) =>
+              msg.sender === "bot" ? (
+                <div className="bot_message" key={index}>
+                  <div className="message_content">
+                    {msg.greeting && <h3>{msg.greeting}</h3>}
+                    <p style={{ whiteSpace: "pre-line" }}>{msg.text}</p>
+                    {msg.time && <span className="msg_time">{msg.time}</span>}
+                  </div>
+                </div>
+              ) : (
+                <div className="user_message" key={index}>
+                  <div className="message_content">
+                    <p>{msg.text}</p>
+                    <span className="msg_time">{msg.time}</span>
+                  </div>
+                </div>
+              )
+            )}
+            {isSending && (
+              <div className="bot_message">
+                <div className="message_content">
+                  <p>Typing...</p>
+                </div>
               </div>
-            </div>
-            <div className="user_message">
-              <div className="message_content">
-                <p>What is PM Kisan Yojana?</p>
-                <span className="msg_time">10:35 AM</span>
-              </div>
-            </div>
-            <div className="bot_message">
-              <div className="message_content">
-                <h3>Hello!</h3>
-                <p>
-                  I'm Aurora, your government scheme assistant. I can help you
-                  find government schemes,check eligibility, required
-                  documents,benefits,application process and much more.
-                  <br />
-                  How can I assist you today?
-                </p>
-                <span className="msg_time">10:30 AM</span>
-              </div>
-            </div>
-            <div className="user_message">
-              <div className="message_content">
-                <p>What is PM Kisan Yojana?</p>
-                <span className="msg_time">10:35 AM</span>
-              </div>
-            </div>
-            <div className="bot_message">
-              <div className="message_content">
-                <h3>Hello!</h3>
-                <p>
-                  I'm Aurora, your government scheme assistant. I can help you
-                  find government schemes,check eligibility, required
-                  documents,benefits,application process and much more.
-                  <br />
-                  How can I assist you today?
-                </p>
-                <span className="msg_time">10:30 AM</span>
-              </div>
-            </div>
-            <div className="user_message">
-              <div className="message_content">
-                <p>What is PM Kisan Yojana?</p>
-                <span className="msg_time">10:35 AM</span>
-              </div>
-            </div>
-            <div className="bot_message">
-              <div className="message_content">
-                <h3>Hello!</h3>
-                <p>
-                  I'm Aurora, your government scheme assistant. I can help you
-                  find government schemes,check eligibility, required
-                  documents,benefits,application process and much more.
-                  <br />
-                  How can I assist you today?
-                </p>
-                <span className="msg_time">10:30 AM</span>
-              </div>
-            </div>
-            <div className="user_message">
-              <div className="message_content">
-                <p>
-                  What is PM Kisan Yojana? hello my name is ayush gholap
-                  currently pursuing datascience and Ai in RJ college
-                </p>
-                <span className="msg_time">10:35 AM</span>
-              </div>
-            </div>
+            )}
           </div>
           <div className="chat_footer">
             <div className="Input_message">
@@ -257,8 +277,15 @@ function Home() {
                 placeholder="Ask Aurora.."
                 id="user_input"
                 className="user_query"
+                value={userInput}
+                onChange={(e) => setUserInput(e.target.value)}
+                onKeyDown={handleInputKeyDown}
               />
-              <i className="fa-solid fa-arrow-up" id="Send_btn"></i>
+              <i
+                className="fa-solid fa-arrow-up"
+                id="Send_btn"
+                onClick={handleSend}
+              ></i>
             </div>
           </div>
         </main>
@@ -275,7 +302,11 @@ function Home() {
             This action cannot be undone, Your chat will be permanently deleted.
           </div>
           <div className="precaution_icons">
-            <button className="deleteChatbtn" type="button">
+            <button
+              onClick={confirmDelete}
+              className="deleteChatbtn"
+              type="button"
+            >
               Delete
             </button>
             <button
