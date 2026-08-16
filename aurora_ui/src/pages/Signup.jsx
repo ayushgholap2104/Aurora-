@@ -6,13 +6,14 @@ import {useNavigate} from "react-router-dom"
 
 function Signup() {
   const navigate = useNavigate();
-  const handleSignup = () =>{
-    navigate('./home')
+  const handleSignup = (event) =>{
+    event.preventDefault()
+    navigate('/home')
   }
   return (
     <>
       <main className="Sign_up">
-        <form autoComplete="off">
+        <form autoComplete="off" onSubmit={handleSignup}>
           <div className="signup">
             <div className="Aurora_logo">
               <img src={logo} alt="AuroraLogo" />
@@ -53,7 +54,6 @@ function Signup() {
             </div>
             <div className="create_button">
               <button 
-              onClick={handleSignup}
               type="submit" 
               id="btn">
                 Submit

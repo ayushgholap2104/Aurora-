@@ -6,13 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
-  const handleLogin = () => {
-    navigate("./home");
+  const handleLogin = (event) => {
+    event.preventDefault()
+    navigate('/home');
   };
   return (
     <>
       <main className="Sign_in">
-        <form autoComplete="off">
+        <form autoComplete="off" onSubmit={handleLogin}>
           <div className="signin">
             <div className="Aurora_logo">
               <img src={logo} alt="AuroraLogo" />
@@ -42,7 +43,6 @@ function Login() {
             </div>
             <div className="create_button">
               <button 
-              onClick={handleLogin}
               type="submit" 
               id="btn">
                 Submit
