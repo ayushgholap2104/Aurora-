@@ -76,7 +76,7 @@ function Home() {
             >
               <i className="fa-regular fa-house"></i>
               {isSidebarOpen && (
-                <Link to="./home" className="home-btn">
+                <Link to="/home" className="home-btn">
                   Home
                 </Link>
               )}
