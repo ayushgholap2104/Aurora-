@@ -637,8 +637,9 @@ body,
   border-radius: 30px;
   padding: 0.1rem;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   bottom: 30px;
   width: 80%;
   max-width: 900px;
@@ -672,6 +673,12 @@ body,
 .Aurora_container .main_content .chat_footer .Input_message .inputFilebtn {
   position: relative;
 }
+.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .uploadOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 59;
+}
 .Aurora_container
   .main_content
   .chat_footer
@@ -693,6 +700,7 @@ body,
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.2s ease;
+  z-index: 60;
 }
 .Aurora_container
   .main_content

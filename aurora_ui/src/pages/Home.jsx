@@ -16,7 +16,10 @@ const WELCOME_MESSAGE = {
 };
 
 function formatTime() {
-  return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  return new Date().toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 }
 
 function Home() {
@@ -169,8 +172,24 @@ function Home() {
             </div> */}
           </div>
           <div className="sidebar_footer">
+            <div
+              className={`profile_container ${isChatinfoOpen ? "show" : ""}`}
+            >
+              <div className="profileInfo profileAction">
+                <i className="bi bi-download"></i>
+                <span>Download PDF</span>
+              </div>
+              <div
+                className="Logout profileAction"
+              >
+                <i className="bi bi-trash3"></i>
+                <span>Logout</span>
+              </div>
+            </div>
             <div className="user_info">
-              <p className="username_Letter">{displayName.charAt(0).toUpperCase()}</p>
+              <p className="username_Letter">
+                {displayName.charAt(0).toUpperCase()}
+              </p>
               {isSidebarOpen && (
                 <div className="userName hide_text">{displayName}</div>
               )}
@@ -249,7 +268,7 @@ function Home() {
                     <span className="msg_time">{msg.time}</span>
                   </div>
                 </div>
-              )
+              ),
             )}
             {isSending && (
               <div className="bot_message">
@@ -267,6 +286,12 @@ function Home() {
                   className="fa-solid fa-plus"
                   id="inputAddIcon"
                 ></i>
+                {isUploadOpen && (
+                  <div
+                    onClick={() => setIsUploadOpen(false)}
+                    className="uploadOverlay"
+                  ></div>
+                )}
                 <div
                   onClick={fileClick}
                   className={`fileUpload_container ${isUploadOpen ? "show" : ""}`}
@@ -294,6 +319,12 @@ function Home() {
               ></i>
             </div>
           </div>
+          {isUploadOpen && (
+            <div
+              onClick={() => setIsUploadOpen(false)}
+              className="uploadOverlay"
+            ></div>
+          )}
         </main>
         {isDeleteClick && (
           <div
