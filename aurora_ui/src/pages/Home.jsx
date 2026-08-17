@@ -150,7 +150,7 @@ function Home() {
             >
               <i className="fa-regular fa-house"></i>
               {isSidebarOpen && (
-                <Link to="./home" className="home-btn">
+                <Link to="/home" className="home-btn">
                   Home
                 </Link>
               )}
@@ -205,6 +205,12 @@ function Home() {
                   className="fa-solid fa-ellipsis"
                   id="chat_info"
                 ></i>
+                {isChatinfoOpen && (
+                  <div
+                    onClick={() => setIsChatinfoOpen(false)}
+                    className="chatinfoOverlay"
+                  ></div>
+                )}
                 <div
                   className={`chatAction_container ${isChatinfoOpen ? "show" : ""}`}
                 >
@@ -212,8 +218,8 @@ function Home() {
                     className="fileShare chatAction"
                     onClick={shareConversation}
                   >
-                    <i className="bi bi-upload"></i>
-                    <span>Share conversation</span>
+                    <i className="bi bi-download"></i>
+                    <span>Download PDF</span>
                   </div>
                   <div
                     className="fileDelete chatAction"
