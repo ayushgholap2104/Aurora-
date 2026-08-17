@@ -222,6 +222,133 @@ body,
 .Aurora_container .Sidebar_container .sidebar_footer {
   margin-top: auto;
 }
+.Aurora_container .Sidebar_container .sidebar_footer .profile_container {
+  position: absolute;
+  bottom: 70px;
+  height: 135px;
+  width: 300px;
+  background: #090d18;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  left: 5px;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.Aurora_container .Sidebar_container.light .sidebar_footer .profile_container {
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+  background: #fcfcfc;
+}
+.Aurora_container
+  .Sidebar_container
+  .sidebar_footer
+  .profile_container
+  .profileAction {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  /* padding: 10px; */
+  height: 60px;
+  border-radius: 15px;
+  cursor: pointer;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  color: #e5e7eb;
+  padding-left: 10px;
+}
+.Aurora_container
+  .Sidebar_container.light
+  .sidebar_footer
+  .profile_container
+  .profile_info
+  .userName {
+  color: #000000;
+}
+.Aurora_container
+  .Sidebar_container
+  .sidebar_footer
+  .profile_container
+  .profile_info:hover {
+  background-color: #0b1323;
+}
+.Aurora_container
+  .Sidebar_container.light
+  .sidebar_footer
+  .profile_container
+  .profile_info:hover {
+  background: #efefef;
+}
+
+.Aurora_container
+  .Sidebar_container
+  .sidebar_footer
+  .profile_container
+  .profile_info
+  p {
+  width: 34px;
+  height: 34px;
+  background-color: #21c7b1;
+  border-radius: 50%;
+  font-size: 16px;
+  /* margin-left: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aurora_container
+  .Sidebar_container
+  .sidebar_footer
+  .profile_container
+  .profile_info
+  .userName {
+  font-size: 16px;
+}
+.Aurora_container
+  .Sidebar_container
+  .sidebar_footer
+  .profile_container
+  .Logout {
+  display: flex;
+  align-items: center;
+  color: #ff6b6b;
+}
+.Aurora_container
+  .Sidebar_container
+  .sidebar_footer
+  .profile_container
+  .Logout:hover {
+  background-color: #3b1f25;
+}
+.Aurora_container
+  .Sidebar_container.light
+  .sidebar_footer
+  .profile_container
+  .Logout:hover {
+  background-color: #ffd0ce;
+}
+.Aurora_container
+  .Sidebar_container
+  .sidebar_footer
+  .profile_container
+  .Logout
+  i {
+  width: 35px;
+  background-color: transparent;
+  font-size: 20px;
+}
+.Aurora_container
+  .Sidebar_container
+  .sidebar_footer
+  .profile_container
+  .Logout
+  span {
+  font-size: 16px;
+}
 .Aurora_container .Sidebar_container .sidebar_footer .user_info {
   display: flex;
   gap: 20px;
@@ -383,12 +510,11 @@ body,
 .Aurora_container .main_content .chatBtnContainer {
   position: relative;
 }
-.Aurora_container .main_content .chatBtnContainer .chatinfoOverlay{
+.Aurora_container .main_content .chatBtnContainer .chatinfoOverlay {
   background: rgba(0, 0, 0, 0.35);
   position: fixed;
   inset: 0;
   z-index: 49;
-
 }
 .Aurora_container .main_content .chatBtnContainer .chatAction_container {
   position: absolute;
@@ -673,7 +799,12 @@ body,
 .Aurora_container .main_content .chat_footer .Input_message .inputFilebtn {
   position: relative;
 }
-.Aurora_container .main_content .chat_footer .Input_message .inputFilebtn .uploadOverlay {
+.Aurora_container
+  .main_content
+  .chat_footer
+  .Input_message
+  .inputFilebtn
+  .uploadOverlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
@@ -850,7 +981,7 @@ body,
   cursor: pointer;
   background-color: #efefef;
 }
-.Aurora_container .precautionOverlay{
+.Aurora_container .precautionOverlay {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.35);
   position: fixed;
@@ -877,10 +1008,8 @@ body,
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   text-align: center;
   z-index: 1000;
-  
-
 }
-.Aurora_container .precaution_container.show{
+.Aurora_container .precaution_container.show {
   opacity: 1;
   visibility: visible;
 }
@@ -921,19 +1050,12 @@ body,
   font-size: 16px;
   cursor: pointer;
   font-weight: 400;
-
 }
-.Aurora_container
-  .precaution_container
-  .precaution_icons
-  .deleteChatbtn {
+.Aurora_container .precaution_container .precaution_icons .deleteChatbtn {
   background-color: #eb2553;
   color: #fff;
 }
-.Aurora_container
-  .precaution_container
-  .precaution_icons
-  .cancleChatbtn {
+.Aurora_container .precaution_container .precaution_icons .cancleChatbtn {
   background: #252525;
   color: #e8eaf0;
 }

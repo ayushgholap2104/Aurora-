@@ -172,20 +172,6 @@ function Home() {
             </div> */}
           </div>
           <div className="sidebar_footer">
-            <div
-              className={`profile_container ${isChatinfoOpen ? "show" : ""}`}
-            >
-              <div className="profileInfo profileAction">
-                <i className="bi bi-download"></i>
-                <span>Download PDF</span>
-              </div>
-              <div
-                className="Logout profileAction"
-              >
-                <i className="bi bi-trash3"></i>
-                <span>Logout</span>
-              </div>
-            </div>
             <div className="user_info">
               <p className="username_Letter">
                 {displayName.charAt(0).toUpperCase()}
@@ -193,6 +179,20 @@ function Home() {
               {isSidebarOpen && (
                 <div className="userName hide_text">{displayName}</div>
               )}
+            </div>
+            <div className="profile_container">
+              <div className="profile_info profileAction">
+                <p className="userF_letter">
+                  {displayName.charAt(0).toUpperCase()}
+                </p>
+                {isSidebarOpen && (
+                  <div className="userName hide_text">{displayName}</div>
+                )}
+              </div>
+              <div className="Logout profileAction">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+              </div>
             </div>
           </div>
         </div>
