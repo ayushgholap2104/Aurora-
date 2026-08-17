@@ -231,7 +231,7 @@ body,
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   left: 5px;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -252,7 +252,7 @@ body,
   flex-direction: row;
   gap: 15px;
   /* padding: 10px; */
-  height: 60px;
+  height: 50px;
   border-radius: 15px;
   cursor: pointer;
   align-items: center;
@@ -260,6 +260,7 @@ body,
   white-space: nowrap;
   color: #e5e7eb;
   padding-left: 10px;
+  width: 280px;
 }
 .Aurora_container
   .Sidebar_container.light
