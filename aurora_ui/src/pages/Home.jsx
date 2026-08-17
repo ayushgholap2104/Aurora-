@@ -29,6 +29,7 @@ function Home() {
   const [isChatinfoOpen, setIsChatinfoOpen] = useState(false);
   const [isDeleteClick, setIsDeleteClick] = useState(false);
   const [isPrecautionOpen, setIsPrecautionOpen] = useState(false);
+  const [isProfileClick, setIsProfileClick] = useState(false);
 
   const [messages, setMessages] = useState([WELCOME_MESSAGE]);
   const [userInput, setUserInput] = useState("");
@@ -63,6 +64,9 @@ function Home() {
   const cancleDelete = () => {
     setIsDeleteClick(false);
   };
+  const profileClick = () =>{
+    setIsProfileClick((prev =>!prev))
+  }
   const confirmDelete = () => {
     setMessages([WELCOME_MESSAGE]);
     setIsDeleteClick(false);
@@ -172,7 +176,9 @@ function Home() {
             </div> */}
           </div>
           <div className="sidebar_footer">
-            <div className="user_info">
+            <div
+            onClick={profileClick}
+             className="user_info">
               <p className="username_Letter">
                 {displayName.charAt(0).toUpperCase()}
               </p>
@@ -180,7 +186,7 @@ function Home() {
                 <div className="userName hide_text">{displayName}</div>
               )}
             </div>
-            <div className="profile_container">
+            <div className={`profile_container ${isProfileClick ? "show":""}`}>
               <div className="profile_info profileAction">
                 <p className="userF_letter">
                   {displayName.charAt(0).toUpperCase()}

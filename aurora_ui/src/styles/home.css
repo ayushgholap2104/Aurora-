@@ -236,6 +236,15 @@ body,
   justify-content: center;
   flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.04);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+.Aurora_container .Sidebar_container .sidebar_footer .profile_container.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 .Aurora_container .Sidebar_container.light .sidebar_footer .profile_container {
   box-shadow:
