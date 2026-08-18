@@ -74,6 +74,9 @@ function Home() {
   const logoutClick = () => {
     setIsProfileClick(false);
   };
+  const profiletabClick = () =>{
+    setIsProfileClick(false)
+  }
 
   const handleSend = async () => {
     const text = userInput.trim();
@@ -196,7 +199,9 @@ function Home() {
             <div
               className={`profile_container ${isProfileClick ? "show" : ""}`}
             >
-              <div className="profile_info profileAction">
+              <div
+              onClick={profiletabClick}
+               className="profile_info profileAction">
                 <p className="userF_letter">
                   {displayName.charAt(0).toUpperCase()}
                 </p>
