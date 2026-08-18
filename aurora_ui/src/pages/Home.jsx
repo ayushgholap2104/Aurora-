@@ -64,12 +64,15 @@ function Home() {
   const cancleDelete = () => {
     setIsDeleteClick(false);
   };
-  const profileClick = () =>{
-    setIsProfileClick((prev =>!prev))
-  }
+  const profileClick = () => {
+    setIsProfileClick((prev) => !prev);
+  };
   const confirmDelete = () => {
     setMessages([WELCOME_MESSAGE]);
     setIsDeleteClick(false);
+  };
+  const logoutClick = () => {
+    setIsProfileClick(false);
   };
 
   const handleSend = async () => {
@@ -176,9 +179,7 @@ function Home() {
             </div> */}
           </div>
           <div className="sidebar_footer">
-            <div
-            onClick={profileClick}
-             className="user_info">
+            <div onClick={profileClick} className="user_info">
               <p className="username_Letter">
                 {displayName.charAt(0).toUpperCase()}
               </p>
@@ -186,16 +187,24 @@ function Home() {
                 <div className="userName hide_text">{displayName}</div>
               )}
             </div>
-            <div className={`profile_container ${isProfileClick ? "show":""}`}>
+            {isProfileClick && (
+              <div
+                onClick={() => setIsProfileClick(false)}
+                class="profileOverlay"
+              ></div>
+            )}
+            <div
+              className={`profile_container ${isProfileClick ? "show" : ""}`}
+            >
               <div className="profile_info profileAction">
                 <p className="userF_letter">
                   {displayName.charAt(0).toUpperCase()}
                 </p>
-                {isSidebarOpen && (
-                  <div className="userName hide_text">{displayName}</div>
-                )}
+                <div className="userName hide_text">{displayName}</div>
               </div>
-              <div className="Logout profileAction">
+              <div
+              onClick={logoutClick}
+               className="Logout profileAction">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 <span>Logout</span>
               </div>

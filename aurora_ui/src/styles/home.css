@@ -222,10 +222,16 @@ body,
 .Aurora_container .Sidebar_container .sidebar_footer {
   margin-top: auto;
 }
+.Aurora_container .Sidebar_container .sidebar_footer .profileOverlay{
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  position: fixed;
+  z-index: 49;
+}
 .Aurora_container .Sidebar_container .sidebar_footer .profile_container {
   position: absolute;
   bottom: 70px;
-  height: 135px;
+  height: 130px;
   width: 300px;
   background: #090d18;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -240,6 +246,7 @@ body,
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.2s ease;
+  z-index: 50;
 }
 .Aurora_container .Sidebar_container .sidebar_footer .profile_container.show{
   opacity: 1;
