@@ -30,6 +30,7 @@ function Home() {
   const [isDeleteClick, setIsDeleteClick] = useState(false);
   const [isPrecautionOpen, setIsPrecautionOpen] = useState(false);
   const [isProfileClick, setIsProfileClick] = useState(false);
+  const [isLogoutClick, setIsLogoutClick] = useState(false);
 
   const [messages, setMessages] = useState([WELCOME_MESSAGE]);
   const [userInput, setUserInput] = useState("");
@@ -64,6 +65,9 @@ function Home() {
   const cancleDelete = () => {
     setIsDeleteClick(false);
   };
+  const cancleLogout = () =>{
+    setIsLogoutClick(false)
+  }
   const profileClick = () => {
     setIsProfileClick((prev) => !prev);
   };
@@ -73,10 +77,12 @@ function Home() {
   };
   const logoutClick = () => {
     setIsProfileClick(false);
+    setIsLogoutClick(true)
   };
-  const profiletabClick = () =>{
-    setIsProfileClick(false)
-  }
+  const profiletabClick = () => {
+    setIsProfileClick(false);
+  };
+  
 
   const handleSend = async () => {
     const text = userInput.trim();
@@ -200,17 +206,16 @@ function Home() {
               className={`profile_container ${isProfileClick ? "show" : ""}`}
             >
               <div
-              onClick={profiletabClick}
-               className="profile_info profileAction">
+                onClick={profiletabClick}
+                className="profile_info profileAction"
+              >
                 <p className="userF_letter">
                   {displayName.charAt(0).toUpperCase()}
                 </p>
                 <div className="userName hide_text">{displayName}</div>
               </div>
-              <div
-              onClick={logoutClick}
-               className="Logout profileAction">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <div onClick={logoutClick} className="Logout profileAction">
+                <i className="fa-solid fa-arrow-right-from-bracket"></i>
                 <span>Logout</span>
               </div>
             </div>
@@ -352,6 +357,7 @@ function Home() {
             onClick={() => setIsDeleteClick(false)}
           ></div>
         )}
+        {/* For Delete */}
         <div className={`precaution_container ${isDeleteClick ? "show" : ""}`}>
           <i className="fa-solid fa-triangle-exclamation"></i>
           <div className="precaution_msg1">Are you Sure?</div>
@@ -368,6 +374,36 @@ function Home() {
             </button>
             <button
               onClick={cancleDelete}
+              className="cancleChatbtn"
+              type="button"
+            >
+              Cancle
+            </button>
+          </div>
+        </div>
+        {isLogoutClick && (
+          <div
+            className="precaution2Overlay"
+            onClick={() => setIsLogoutClick(false)}
+          ></div>
+        )}
+        {/* For Logout */}
+        <div className={`precaution_container2 ${isLogoutClick ? "show" : ""}`}>
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <div className="precaution_msg1">Are you Sure?</div>
+          <div className="precaution_msg2">
+            You will be logged out and Your chat will be permanently deleted.
+          </div>
+          <div className="precaution_icons">
+            <button
+              onClick={confirmDelete}
+              className="deleteChatbtn"
+              type="button"
+            >
+              Logout
+            </button>
+            <button
+              onClick={cancleLogout}
               className="cancleChatbtn"
               type="button"
             >

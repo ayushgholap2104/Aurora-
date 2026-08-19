@@ -260,9 +260,10 @@
   .Aurora_container .main_content.light .chat_footer .Input_message #Send_btn {
     background-color: #efefef;
   }
+  /* Delete Precaution */
   .Aurora_container .precaution_container {
     height: 380px;
-    width: 400px;
+    width: 410px;
   }
   .Aurora_container .precaution_container i {
     height: 45px;
@@ -277,6 +278,28 @@
     width: 340px;
   }
   .Aurora_container .precaution_container .precaution_icons button {
+    height: 50px;
+    width: 320px;
+    font-size: 15px;
+  }
+  /* Logout Precaution */
+  .Aurora_container .precaution_container2 {
+    height: 380px;
+    width: 410px;
+  }
+  .Aurora_container .precaution_container2 i {
+    height: 45px;
+    width: 45px;
+    font-size: 21px;
+  }
+  .Aurora_container .precaution_container2 .precaution_msg1 {
+    font-size: 17px;
+  }
+  .Aurora_container .precaution_container2 .precaution_msg2 {
+    font-size: 15px;
+    width: 340px;
+  }
+  .Aurora_container .precaution_container2 .precaution_icons button {
     height: 50px;
     width: 320px;
     font-size: 15px;
@@ -365,6 +388,7 @@
   .Aurora_container .main_content .chat_footer .Input_message #Send_btn {
     font-size: 18px;
   }
+  /* Delete Precaution */
   .Aurora_container .precaution_container {
     height: 360px;
     width: 370px;
@@ -380,6 +404,26 @@
     width: 320px;
   }
   .Aurora_container .precaution_container .precaution_icons button {
+    height: 50px;
+    width: 280px;
+    font-size: 14px;
+  }
+  /* Logout Precaution */
+  .Aurora_container .precaution_container2 {
+    height: 360px;
+    width: 370px;
+  }
+  .Aurora_container .precaution_container2 i {
+    font-size: 20px;
+  }
+  .Aurora_container .precaution_container2 .precaution_msg1 {
+    font-size: 16px;
+  }
+  .Aurora_container .precaution_container2 .precaution_msg2 {
+    font-size: 14px;
+    width: 320px;
+  }
+  .Aurora_container .precaution_container2 .precaution_icons button {
     height: 50px;
     width: 280px;
     font-size: 14px;
@@ -435,7 +479,13 @@
   .Aurora_container .main_content .chatBtnContainer .chatAction_container {
     width: 230px;
   }
+  /* Delete Precaution */
   .Aurora_container .precaution_container {
+    /* height: 340px; */
+    width: 340px;
+  }
+  /* Logout Precaution */
+  .Aurora_container .precaution_container2 {
     /* height: 340px; */
     width: 340px;
   }
@@ -550,23 +600,6 @@
     span {
     font-size: 15px;
   }
-
-  /* .Aurora_container .main_content .chat_footer .Input_message #Input_filesbtn {
-    font-size: 16px;
-  }
-  .Aurora_container .main_content .chat_footer .Input_message .user_query {
-    font-size: 15px;
-  }
-  .Aurora_container
-    .main_content
-    .chat_footer
-    .Input_message
-    .user_query::placeholder {
-    font-size: 15px;
-  }
-  .Aurora_container .main_content .chat_footer .Input_message #Send_btn {
-    font-size: 16px;
-  } */
 }
 @media only screen and (max-width: 390px) {
   .Aurora_container .Sidebar_container {
@@ -659,6 +692,7 @@
     span {
     font-size: 14px;
   }
+  /* Delete Precaution */
   .Aurora_container .precaution_container {
     height: 340px;
     width: 300px;
@@ -676,6 +710,27 @@
     width: 280px;
   }
   .Aurora_container .precaution_container .precaution_icons button {
+    height: 50px;
+    width: 230px;
+  }
+  /* Logout Precaution */
+  .Aurora_container .precaution_container2 {
+    height: 340px;
+    width: 300px;
+  }
+  .Aurora_container .precaution_container2 i {
+    height: 40px;
+    width: 40px;
+    font-size: 19px;
+  }
+  .Aurora_container .precaution_container2 .precaution_msg1 {
+    font-size: 15px;
+  }
+  .Aurora_container .precaution_container2 .precaution_msg2 {
+    font-size: 13px;
+    width: 280px;
+  }
+  .Aurora_container .precaution_container2 .precaution_icons button {
     height: 50px;
     width: 230px;
   }

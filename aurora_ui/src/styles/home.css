@@ -222,7 +222,7 @@ body,
 .Aurora_container .Sidebar_container .sidebar_footer {
   margin-top: auto;
 }
-.Aurora_container .Sidebar_container .sidebar_footer .profileOverlay{
+.Aurora_container .Sidebar_container .sidebar_footer .profileOverlay {
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
   position: fixed;
@@ -241,14 +241,17 @@ body,
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.04);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.2s ease;
   z-index: 50;
+  border: 1px solid #1d2638;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.35),
+    0 2px 8px rgba(0, 0, 0, 0.25);
 }
-.Aurora_container .Sidebar_container .sidebar_footer .profile_container.show{
+.Aurora_container .Sidebar_container .sidebar_footer .profile_container.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
@@ -998,12 +1001,14 @@ body,
   cursor: pointer;
   background-color: #efefef;
 }
+/* For Delete */
 .Aurora_container .precautionOverlay {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.35);
   position: fixed;
   z-index: 999;
 }
+
 .Aurora_container .precaution_container {
   position: fixed;
   top: 50%;
@@ -1017,7 +1022,7 @@ body,
   flex-direction: column;
   gap: 30px;
   justify-content: center;
-  width: 420px;
+  width: 430px;
   border-radius: 1rem;
   opacity: 0;
   visibility: hidden;
@@ -1073,6 +1078,86 @@ body,
   color: #fff;
 }
 .Aurora_container .precaution_container .precaution_icons .cancleChatbtn {
+  background: #252525;
+  color: #e8eaf0;
+}
+/* For Logout */
+.Aurora_container .precaution2Overlay {
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: fixed;
+  z-index: 999;
+}
+
+.Aurora_container .precaution_container2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 380px;
+  background-color: #e8d0d0;
+  /* background-color: #EAE0CF; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  width: 430px;
+  border-radius: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
+}
+.Aurora_container .precaution_container2.show {
+  opacity: 1;
+  visibility: visible;
+}
+.Aurora_container .precaution_container2 i {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 169, 182);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 22px;
+}
+.Aurora_container .precaution_container2 .precaution_msg1 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.Aurora_container .precaution_container2 .precaution_msg2 {
+  font-weight: 400;
+  font-size: 16px;
+  width: 360px;
+}
+.Aurora_container .precaution_container2 .precaution_icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Aurora_container .precaution_container2 .precaution_icons button {
+  height: 50px;
+  width: 350px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.Aurora_container .precaution_container2 .precaution_icons .deleteChatbtn {
+  background-color: #eb2553;
+  color: #fff;
+}
+.Aurora_container .precaution_container2 .precaution_icons .cancleChatbtn {
   background: #252525;
   color: #e8eaf0;
 }
