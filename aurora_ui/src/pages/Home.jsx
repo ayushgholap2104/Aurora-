@@ -389,7 +389,7 @@ function Home() {
         )}
         {/* For Logout */}
         <div className={`precaution_container2 ${isLogoutClick ? "show" : ""}`}>
-          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <i className="fa-solid fa-arrow-right-from-bracket"></i>
           <div className="precaution_msg1">Are you Sure?</div>
           <div className="precaution_msg2">
             You will be logged out and Your chat will be permanently deleted.
