@@ -5,6 +5,8 @@ import AuroraDarkBg from "../assets/img/AuroraDarkBg.png";
 import AuroraWhiteBg from "../assets/img/AuroraWhiteBg.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const API_BASE_URL = "http://127.0.0.1:5000";
 
@@ -33,6 +35,13 @@ function Home() {
   const [isLogoutClick, setIsLogoutClick] = useState(false);
 
   const [messages, setMessages] = useState([WELCOME_MESSAGE]);
+  const chatContainerRef = useRef(null)
+  useEffect(() =>{
+    chatContainerRef.current?.scrollTo({
+      top: chatContainerRef.current.scrollHeight,
+      behavior:"smooth"
+    })
+  },[messages])
   const [userInput, setUserInput] = useState("");
   const [isSending, setIsSending] = useState(false);
 
@@ -276,7 +285,9 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="chat_container">
+          <div
+          ref={chatContainerRef}
+           className="chat_container">
             {messages.map((msg, index) =>
               msg.sender === "bot" ? (
                 <div className="bot_message" key={index}>
