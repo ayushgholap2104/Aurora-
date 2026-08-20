@@ -8,6 +8,9 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+// For Pdf Creation
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const API_BASE_URL = "http://127.0.0.1:5000";
 
@@ -36,13 +39,13 @@ function Home() {
   const [isLogoutClick, setIsLogoutClick] = useState(false);
 
   const [messages, setMessages] = useState([WELCOME_MESSAGE]);
-  const chatContainerRef = useRef(null)
-  useEffect(() =>{
+  const chatContainerRef = useRef(null);
+  useEffect(() => {
     chatContainerRef.current?.scrollTo({
       top: chatContainerRef.current.scrollHeight,
-      behavior:"smooth"
-    })
-  },[messages])
+      behavior: "smooth",
+    });
+  }, [messages]);
   const [userInput, setUserInput] = useState("");
   const [isSending, setIsSending] = useState(false);
 
@@ -75,9 +78,9 @@ function Home() {
   const cancleDelete = () => {
     setIsDeleteClick(false);
   };
-  const cancleLogout = () =>{
-    setIsLogoutClick(false)
-  }
+  const cancleLogout = () => {
+    setIsLogoutClick(false);
+  };
   const profileClick = () => {
     setIsProfileClick((prev) => !prev);
   };
@@ -87,19 +90,18 @@ function Home() {
   };
   const logoutClick = () => {
     setIsProfileClick(false);
-    setIsLogoutClick(true)
+    setIsLogoutClick(true);
   };
-  const navigate = useNavigate()
-  const logoutPrecautionClick = () =>{
-    navigate('/login')
-  }
-  const deletePrecautionClick = () =>{
-    navigate('/')
-  }
+  const navigate = useNavigate();
+  const logoutPrecautionClick = () => {
+    navigate("/login");
+  };
+  const deletePrecautionClick = () => {
+    navigate("/");
+  };
   const profiletabClick = () => {
     setIsProfileClick(false);
   };
-  
 
   const handleSend = async () => {
     const text = userInput.trim();
@@ -139,6 +141,19 @@ function Home() {
     } finally {
       setIsSending(false);
     }
+  };
+
+  const downloadPdf = async () => {
+    const element = document.getElementById("pdf_content");
+    const canvas = await html2canvas(element);
+
+    const image = canvas.toDataURL("image/PNG");
+
+    const pdf = new jsPDF();
+
+    pdf.addImage(image, "PDF", 0, 0, 210, 297);
+
+    pdf.save("Aurora_response.pdf");
   };
 
   const handleInputKeyDown = (e) => {
@@ -277,7 +292,10 @@ function Home() {
                 >
                   <div
                     className="fileShare chatAction"
-                    onClick={shareConversation}
+                    onClick={() => {
+                      shareConversation();
+                      downloadPdf();
+                    }}
                   >
                     <i className="bi bi-download"></i>
                     <span>Download PDF</span>
@@ -294,8 +312,10 @@ function Home() {
             </div>
           </div>
           <div
-          ref={chatContainerRef}
-           className="chat_container">
+            ref={chatContainerRef}
+            id="pdf_content"
+            className="chat_container"
+          >
             {messages.map((msg, index) =>
               msg.sender === "bot" ? (
                 <div className="bot_message" key={index}>
@@ -387,7 +407,7 @@ function Home() {
             <button
               onClick={() => {
                 confirmDelete();
-                deletePrecautionClick()
+                deletePrecautionClick();
               }}
               className="deleteChatbtn"
               type="button"
@@ -418,9 +438,9 @@ function Home() {
           </div>
           <div className="precaution_icons">
             <button
-              onClick={() => { 
+              onClick={() => {
                 confirmDelete();
-                logoutPrecautionClick()
+                logoutPrecautionClick();
               }}
               className="deleteChatbtn"
               type="button"
