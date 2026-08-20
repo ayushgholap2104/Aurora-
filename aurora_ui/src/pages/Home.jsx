@@ -4,6 +4,7 @@ import LogoIcon from "../assets/img/AuroraIcon.png";
 import AuroraDarkBg from "../assets/img/AuroraDarkBg.png";
 import AuroraWhiteBg from "../assets/img/AuroraWhiteBg.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
@@ -88,6 +89,13 @@ function Home() {
     setIsProfileClick(false);
     setIsLogoutClick(true)
   };
+  const navigate = useNavigate()
+  const logoutPrecautionClick = () =>{
+    navigate('/login')
+  }
+  const deletePrecautionClick = () =>{
+    navigate('/')
+  }
   const profiletabClick = () => {
     setIsProfileClick(false);
   };
@@ -208,7 +216,7 @@ function Home() {
             {isProfileClick && (
               <div
                 onClick={() => setIsProfileClick(false)}
-                class="profileOverlay"
+                className="profileOverlay"
               ></div>
             )}
             <div
@@ -377,7 +385,10 @@ function Home() {
           </div>
           <div className="precaution_icons">
             <button
-              onClick={confirmDelete}
+              onClick={() => {
+                confirmDelete();
+                deletePrecautionClick()
+              }}
               className="deleteChatbtn"
               type="button"
             >
@@ -407,7 +418,10 @@ function Home() {
           </div>
           <div className="precaution_icons">
             <button
-              onClick={confirmDelete}
+              onClick={() => { 
+                confirmDelete();
+                logoutPrecautionClick()
+              }}
               className="deleteChatbtn"
               type="button"
             >
