@@ -12,6 +12,7 @@ import { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
+
 const API_BASE_URL = "http://127.0.0.1:5000";
 
 const WELCOME_MESSAGE = {
@@ -145,14 +146,40 @@ function Home() {
 
   const downloadPdf = async () => {
     const element = document.getElementById("pdf_content");
-    const canvas = await html2canvas(element);
+    const canvas = await html2canvas(element,{
+      scale: 1.5,
+      useCORS: true,
+      backgroundColor:"#ffff",
+      width: element.scrollWidth,
+      height: element.scrollHeight,
+      windowWidth: element.scrollWidth,
+      windowHeight: element.scrollHeight
+    });
 
-    const image = canvas.toDataURL("image/PNG");
+    const image = canvas.toDataURL("image/jpeg",0.8);
 
-    const pdf = new jsPDF();
+    const pdf = new jsPDF("p", "mm" ,"a4");
 
-    pdf.addImage(image, "PDF", 0, 0, 210, 297);
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
 
+    const imgWidth = pageWidth
+    const imgHeight = (canvas.height * imgWidth)/ canvas.width;
+
+    let heightLeft = imgHeight
+    let position = 0
+    // First Page
+    pdf.addImage(image, "JPEG",0,position,imgWidth,imgHeight);
+    heightLeft -= pageHeight
+
+    while (heightLeft > 0){
+      position = heightLeft - imgHeight
+
+      pdf.addPage()
+      pdf.addImage(image,"JPEG",0,position,imgWidth,imgHeight);
+
+      heightLeft -= pageHeight
+    }
     pdf.save("Aurora_response.pdf");
   };
 
