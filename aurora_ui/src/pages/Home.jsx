@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+import { pdf } from "@react-pdf/renderer";
+import AuroraPDF from "../components/Aurora_PDF";
 // For Pdf Creation
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
@@ -145,42 +147,20 @@ function Home() {
   };
 
   const downloadPdf = async () => {
-    const element = document.getElementById("pdf_content");
-    const canvas = await html2canvas(element,{
-      scale: 1.5,
-      useCORS: true,
-      backgroundColor:"#ffff",
-      width: element.scrollWidth,
-      height: element.scrollHeight,
-      windowWidth: element.scrollWidth,
-      windowHeight: element.scrollHeight
-    });
+    const blob = await pdf(
+        <AuroraPDF />
+    ).toBlob();
 
-    const image = canvas.toDataURL("image/jpeg",0.8);
+    const url = URL.createObjectURL(blob);
 
-    const pdf = new jsPDF("p", "mm" ,"a4");
+    const link = document.createElement("a");
 
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const pageHeight = pdf.internal.pageSize.getHeight();
+    link.href = url;
+    link.download = "Aurora_Response.pdf";
 
-    const imgWidth = pageWidth
-    const imgHeight = (canvas.height * imgWidth)/ canvas.width;
+    link.click();
 
-    let heightLeft = imgHeight
-    let position = 0
-    // First Page
-    pdf.addImage(image, "JPEG",0,position,imgWidth,imgHeight);
-    heightLeft -= pageHeight
-
-    while (heightLeft > 0){
-      position = heightLeft - imgHeight
-
-      pdf.addPage()
-      pdf.addImage(image,"JPEG",0,position,imgWidth,imgHeight);
-
-      heightLeft -= pageHeight
-    }
-    pdf.save("Aurora_response.pdf");
+    URL.revokeObjectURL(url);
   };
 
   const handleInputKeyDown = (e) => {

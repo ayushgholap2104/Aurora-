@@ -126,15 +126,16 @@ body,
   transition: background-color 0.2s ease;
 }
 .Aurora_container .Sidebar_container.light .new_chat {
-  background: transparent;
+  /* background: transparent; */
   color: #000000;
+  background: rgba(238, 240, 248, 0.65);
 }
-.Aurora_container .Sidebar_container .new_chat:hover {
+/* .Aurora_container .Sidebar_container .new_chat:hover {
   background-color: #1d213c;
-}
-.Aurora_container .Sidebar_container.light .new_chat:hover {
+} */
+/* .Aurora_container .Sidebar_container.light .new_chat:hover {
   background: #efefef;
-}
+} */
 
 .Aurora_container .Sidebar_container .new_chat.collapse {
   background: none;
