@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    marginBottom: 10,
+    marginBottom: 20,
   },
 });
 
