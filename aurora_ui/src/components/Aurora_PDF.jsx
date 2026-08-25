@@ -7,9 +7,11 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontSize: 24,
+    fontSize: 26,
     marginBottom: 20,
     textAlign: "center",
+    fontWeight: 500
+    
   },
 
   text: {

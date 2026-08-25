@@ -99,9 +99,9 @@ function Home() {
   const logoutPrecautionClick = () => {
     navigate("/login");
   };
-  const deletePrecautionClick = () => {
-    navigate("/");
-  };
+  // const deletePrecautionClick = () => {
+  //   navigate("/");
+  // };
   const profiletabClick = () => {
     setIsProfileClick(false);
   };
@@ -414,7 +414,6 @@ function Home() {
             <button
               onClick={() => {
                 confirmDelete();
-                deletePrecautionClick();
               }}
               className="deleteChatbtn"
               type="button"
