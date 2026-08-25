@@ -148,7 +148,7 @@ function Home() {
 
   const downloadPdf = async () => {
     const blob = await pdf(
-        <AuroraPDF />
+        <AuroraPDF messages={messages} />
     ).toBlob();
 
     const url = URL.createObjectURL(blob);

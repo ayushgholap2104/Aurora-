@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginBottom: 10,
+    textAlign: "center",
   },
 
   text: {
@@ -16,12 +17,17 @@ const styles = StyleSheet.create({
   },
 });
 
-const auroraPdf = () => {
+const auroraPdf = ({ messages }) => {
   return (
     <Document>
       <Page size={"A4"} style={styles.page}>
         <Text style={styles.title}>Aurora</Text>
-        <Text style={styles.text}>Hello i am testing the Document</Text>
+        {messages.map((message, index) => (
+          <Text key={index} style={styles.text}>
+            {message.sender === "bot" ? "Aurora: " : "You: "}
+            {message.text}
+          </Text>
+        ))}
       </Page>
     </Document>
   );
