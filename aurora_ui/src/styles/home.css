@@ -936,9 +936,10 @@ body,
   .inputFilebtn
   .fileUpload_container
   .fileUpload
-  input {
+  .addFile {
   display: none;
 }
+
 .Aurora_container
   .main_content
   .chat_footer

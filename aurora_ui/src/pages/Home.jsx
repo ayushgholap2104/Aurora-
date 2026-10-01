@@ -40,6 +40,8 @@ function Home() {
   const [isPrecautionOpen, setIsPrecautionOpen] = useState(false);
   const [isProfileClick, setIsProfileClick] = useState(false);
   const [isLogoutClick, setIsLogoutClick] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const fileInputRef = useRef(null);
 
   const [messages, setMessages] = useState([WELCOME_MESSAGE]);
   const chatContainerRef = useRef(null);
@@ -75,7 +77,7 @@ function Home() {
     setIsChatinfoOpen(false);
     setIsDeleteClick(true);
   };
-  const fileClick = () => {
+  const fileClickopt = () => {
     setIsUploadOpen(false);
   };
   const cancleDelete = () => {
@@ -105,6 +107,9 @@ function Home() {
   const profiletabClick = () => {
     setIsProfileClick(false);
   };
+  const fileClick = () =>{
+    fileInputRef.current.click()
+  }
 
   const handleSend = async () => {
     const text = userInput.trim();
@@ -364,13 +369,20 @@ function Home() {
                   ></div>
                 )}
                 <div
-                  onClick={fileClick}
+                  onClick={fileClickopt}
                   className={`fileUpload_container ${isUploadOpen ? "show" : ""}`}
                 >
-                  <div className="fileUpload">
+                  <div
+                   onClick={fileClick}
+                   className="fileUpload">
                     <i className="bi bi-paperclip"></i>
                     <span>Add photos & files</span>
-                    <input type="file" />
+                    <input
+                      ref={fileInputRef}
+                      className= "addFile"
+                      type="file"
+                      onChange={(e) => setSelectedFile(e.target.files[0])} 
+                    />
                   </div>
                 </div>
               </div>
