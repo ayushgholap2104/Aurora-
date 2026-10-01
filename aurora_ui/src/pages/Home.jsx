@@ -14,7 +14,6 @@ import AuroraPDF from "../components/Aurora_PDF";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-
 const API_BASE_URL = "http://127.0.0.1:5000";
 
 const WELCOME_MESSAGE = {
@@ -107,9 +106,9 @@ function Home() {
   const profiletabClick = () => {
     setIsProfileClick(false);
   };
-  const fileClick = () =>{
-    fileInputRef.current.click()
-  }
+  const fileClick = () => {
+    fileInputRef.current.click();
+  };
 
   const handleSend = async () => {
     const text = userInput.trim();
@@ -152,9 +151,7 @@ function Home() {
   };
 
   const downloadPdf = async () => {
-    const blob = await pdf(
-        <AuroraPDF messages={messages} />
-    ).toBlob();
+    const blob = await pdf(<AuroraPDF messages={messages} />).toBlob();
 
     const url = URL.createObjectURL(blob);
 
@@ -372,16 +369,21 @@ function Home() {
                   onClick={fileClickopt}
                   className={`fileUpload_container ${isUploadOpen ? "show" : ""}`}
                 >
-                  <div
-                   onClick={fileClick}
-                   className="fileUpload">
+                  <div onClick={fileClick} className="fileUpload">
                     <i className="bi bi-paperclip"></i>
                     <span>Add photos & files</span>
                     <input
                       ref={fileInputRef}
-                      className= "addFile"
+                      className="addFile"
                       type="file"
-                      onChange={(e) => setSelectedFile(e.target.files[0])} 
+                      accept="image/*,.pdf"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+
+                        if (file) {
+                          setSelectedFile(file);
+                        }
+                      }}
                     />
                   </div>
                 </div>
