@@ -243,9 +243,9 @@
     .message_content {
     width: 350px;
   }
-  .Aurora_container .main_content .chat_footer .selectedFileCard {
+  .Aurora_container .main_content .chat_footer .sendFileContainer .selectedFileCard {
     width: 180px;
-    margin: 12px 0 85px 80px;
+    /* margin: 12px 0 85px 80px; */
   }
 
   .Aurora_container .main_content .chat_footer .selectedFilePreview {
@@ -380,11 +380,12 @@
     span {
     font-size: 12.5px;
   }
-  .Aurora_container .main_content .chat_footer .selectedFileCard {
+  .Aurora_container .main_content .chat_footer .sendFileContainer .selectedFileCard {
     width: 170px;
-    max-width: calc(100% - 24px);
-    margin: 10px 0 85px 60px;
+    /* max-width: calc(100% - 24px);
+    margin: 10px 0 85px 60px; */
     border-radius: 18px;
+    
   }
 
   .Aurora_container .main_content .chat_footer .selectedFilePreview {
@@ -699,10 +700,8 @@
     span {
     font-size: 10.5px;
   }
-  .Aurora_container .main_content .chat_footer .selectedFileCard {
+  .Aurora_container .main_content .chat_footer .sendFileContainer .selectedFileCard {
     width: 150px;
-    max-width: calc(100% - 20px);
-    margin-left: 35px;
   }
 
   .Aurora_container .main_content .chat_footer .selectedFilePreview {

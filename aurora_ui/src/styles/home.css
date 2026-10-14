@@ -776,10 +776,20 @@ body,
   width: 100%;
   height: 34%;
 }
-.Aurora_container .main_content .chat_footer .sendFile{
-
+.Aurora_container .main_content .chat_footer .sendFileContainer {
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 81px;
+  width: 80%;
+  max-width: 900px;
+  flex-shrink: 0;
 }
-.Aurora_container .main_content .chat_footer .selectedFileCard {
+.Aurora_container .main_content .chat_footer .sendFileContainer .selectedFileCard {
   width: 180px;
   max-width: 100%;
   overflow: hidden;
