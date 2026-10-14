@@ -13,6 +13,8 @@ import AuroraPDF from "../components/Aurora_PDF";
 // For Pdf Creation
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000";
@@ -331,7 +333,9 @@ function Home() {
                 <div className="bot_message" key={index}>
                   <div className="message_content">
                     {msg.greeting && <h3>{msg.greeting}</h3>}
-                    <p style={{ whiteSpace: "pre-line" }}>{msg.text}</p>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {msg.text}
+                    </ReactMarkdown>
                     {msg.time && <span className="msg_time">{msg.time}</span>}
                   </div>
                 </div>

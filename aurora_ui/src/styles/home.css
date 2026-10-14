@@ -656,6 +656,71 @@ body,
 .Aurora_container .main_content .chat_container .bot_message {
   width: 100%;
 }
+.Aurora_container
+  .main_content
+  .chat_container
+  .bot_message
+  .message_content
+  p {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.Aurora_container
+  .main_content
+  .chat_container
+  .bot_message
+  .message_content
+  h1,
+.Aurora_container
+  .main_content
+  .chat_container
+  .bot_message
+  .message_content
+  h2,
+.Aurora_container
+  .main_content
+  .chat_container
+  .bot_message
+  .message_content
+  h3 {
+  margin: 14px 0 8px;
+}
+
+.Aurora_container
+  .main_content
+  .chat_container
+  .bot_message
+  .message_content
+  ul,
+.Aurora_container
+  .main_content
+  .chat_container
+  .bot_message
+  .message_content
+  ol {
+  padding-left: 24px;
+  margin: 8px 0;
+}
+
+.Aurora_container
+  .main_content
+  .chat_container
+  .bot_message
+  .message_content
+  li {
+  margin-bottom: 5px;
+}
+
+.Aurora_container
+  .main_content
+  .chat_container
+  .bot_message
+  .message_content
+  strong {
+  font-weight: 700;
+}
 .Aurora_container .main_content .chat_container .bot_message .message_content {
   padding: 1rem;
   font-size: 17px;
@@ -789,7 +854,11 @@ body,
   max-width: 900px;
   flex-shrink: 0;
 }
-.Aurora_container .main_content .chat_footer .sendFileContainer .selectedFileCard {
+.Aurora_container
+  .main_content
+  .chat_footer
+  .sendFileContainer
+  .selectedFileCard {
   width: 180px;
   max-width: 100%;
   overflow: hidden;
