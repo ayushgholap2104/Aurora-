@@ -14,7 +14,8 @@ import AuroraPDF from "../components/Aurora_PDF";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000";
 
 const WELCOME_MESSAGE = {
   sender: "bot",
@@ -353,37 +354,39 @@ function Home() {
           </div>
           <div className="chat_footer">
             {selectedFile && (
-              <div className="selectedFileCard">
-                <div className="selectedFilePreview">
-                  {selectedFile.type.startsWith("image/") ? (
-                    <img
-                      src={URL.createObjectURL(selectedFile)}
-                      alt={selectedFile.name}
-                    />
-                  ) : (
-                    <i className="bi bi-file-earmark-pdf pdfIcon"></i>
-                  )}
+              <div class="sendFileContainer">
+                <div className="selectedFileCard">
+                  <div className="selectedFilePreview">
+                    {selectedFile.type.startsWith("image/") ? (
+                      <img
+                        src={URL.createObjectURL(selectedFile)}
+                        alt={selectedFile.name}
+                      />
+                    ) : (
+                      <i className="bi bi-file-earmark-pdf pdfIcon"></i>
+                    )}
 
-                  <button
-                    type="button"
-                    className="removeFileBtn"
-                    onClick={() => {
-                      setSelectedFile(null);
+                    <button
+                      type="button"
+                      className="removeFileBtn"
+                      onClick={() => {
+                        setSelectedFile(null);
 
-                      if (fileInputRef.current) {
-                        fileInputRef.current.value = "";
-                      }
-                    }}
-                    aria-label="Remove file"
-                  >
-                    <i className="bi bi-x"></i>
-                  </button>
-                </div>
+                        if (fileInputRef.current) {
+                          fileInputRef.current.value = "";
+                        }
+                      }}
+                      aria-label="Remove file"
+                    >
+                      <i className="bi bi-x"></i>
+                    </button>
+                  </div>
 
-                <div className="selectedFileInfo">
-                  <i className="bi bi-file-earmark-pdf"></i>
+                  <div className="selectedFileInfo">
+                    <i className="bi bi-file-earmark-pdf"></i>
 
-                  <span title={selectedFile.name}>{selectedFile.name}</span>
+                    <span title={selectedFile.name}>{selectedFile.name}</span>
+                  </div>
                 </div>
               </div>
             )}
