@@ -107,7 +107,7 @@ function Home() {
     setIsProfileClick(false);
   };
   const fileClick = () => {
-    fileInputRef.current.click();
+    fileInputRef.current?.click();
   };
 
   const handleSend = async () => {
@@ -352,6 +352,41 @@ function Home() {
             )}
           </div>
           <div className="chat_footer">
+            {selectedFile && (
+              <div className="selectedFileCard">
+                <div className="selectedFilePreview">
+                  {selectedFile.type.startsWith("image/") ? (
+                    <img
+                      src={URL.createObjectURL(selectedFile)}
+                      alt={selectedFile.name}
+                    />
+                  ) : (
+                    <i className="bi bi-file-earmark-pdf pdfIcon"></i>
+                  )}
+
+                  <button
+                    type="button"
+                    className="removeFileBtn"
+                    onClick={() => {
+                      setSelectedFile(null);
+
+                      if (fileInputRef.current) {
+                        fileInputRef.current.value = "";
+                      }
+                    }}
+                    aria-label="Remove file"
+                  >
+                    <i className="bi bi-x"></i>
+                  </button>
+                </div>
+
+                <div className="selectedFileInfo">
+                  <i className="bi bi-file-earmark-pdf"></i>
+
+                  <span title={selectedFile.name}>{selectedFile.name}</span>
+                </div>
+              </div>
+            )}
             <div className="Input_message">
               <div className="inputFilebtn">
                 <i

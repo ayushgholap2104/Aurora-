@@ -243,6 +243,14 @@
     .message_content {
     width: 350px;
   }
+  .Aurora_container .main_content .chat_footer .selectedFileCard {
+    width: 180px;
+    margin: 12px 0 85px 80px;
+  }
+
+  .Aurora_container .main_content .chat_footer .selectedFilePreview {
+    height: 80px;
+  }
 
   .Aurora_container .main_content .chat_footer .Input_message #inputAddIcon {
     background-color: #6d38d6;
@@ -333,7 +341,7 @@
   .Aurora_container .Sidebar_container {
     width: 310px;
   }
-  .Aurora_container .Sidebar_container .sidebar_footer .profile_container{
+  .Aurora_container .Sidebar_container .sidebar_footer .profile_container {
     width: 290px;
   }
   .Aurora_container .main_content .Chat_head {
@@ -371,6 +379,33 @@
     .message_content
     span {
     font-size: 12.5px;
+  }
+  .Aurora_container .main_content .chat_footer .selectedFileCard {
+    width: 170px;
+    max-width: calc(100% - 24px);
+    margin: 10px 0 85px 60px;
+    border-radius: 18px;
+  }
+
+  .Aurora_container .main_content .chat_footer .selectedFilePreview {
+    height: 75px;
+  }
+
+  .Aurora_container .main_content .chat_footer .selectedFileInfo {
+    padding: 9px 10px;
+    gap: 7px;
+    font-size: 12px;
+  }
+
+  .Aurora_container .main_content .chat_footer .pdfIcon {
+    font-size: 32px;
+  }
+
+  .Aurora_container .main_content .chat_footer .removeFileBtn {
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    right: 5px;
   }
   .Aurora_container .main_content .chat_footer .Input_message #inputAddIcon {
     font-size: 18px;
@@ -511,7 +546,7 @@
   .Aurora_container .Sidebar_container {
     width: 300px;
   }
-  .Aurora_container .Sidebar_container .sidebar_footer .profile_container{
+  .Aurora_container .Sidebar_container .sidebar_footer .profile_container {
     width: 280px;
   }
   .Aurora_container
@@ -605,7 +640,7 @@
   .Aurora_container .Sidebar_container {
     width: 290px;
   }
-  .Aurora_container .Sidebar_container .sidebar_footer .profile_container{
+  .Aurora_container .Sidebar_container .sidebar_footer .profile_container {
     width: 270px;
   }
   .Aurora_container
@@ -663,6 +698,25 @@
     .message_content
     span {
     font-size: 10.5px;
+  }
+  .Aurora_container .main_content .chat_footer .selectedFileCard {
+    width: 150px;
+    max-width: calc(100% - 20px);
+    margin-left: 35px;
+  }
+
+  .Aurora_container .main_content .chat_footer .selectedFilePreview {
+    height: 65px;
+  }
+
+  .Aurora_container .main_content .chat_footer .selectedFileInfo {
+    padding: 8px;
+    gap: 6px;
+    font-size: 11px;
+  }
+
+  .Aurora_container .main_content .chat_footer .selectedFileInfo > i {
+    font-size: 16px;
   }
   .Aurora_container
     .main_content
