@@ -41,7 +41,7 @@ function Login() {
       localStorage.setItem("aurora_token", data.token);
       localStorage.setItem("aurora_user", JSON.stringify(data.user));
 
-      navigate("./home");
+      navigate("/home");
     } catch (err) {
       setError(err.message);
     } finally {
