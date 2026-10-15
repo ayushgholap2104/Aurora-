@@ -839,7 +839,7 @@ body,
 }
 .Aurora_container .main_content .chat_footer {
   width: 100%;
-  height: 34%;
+  /* height: 34%; */
 }
 .Aurora_container .main_content .chat_footer .sendFileContainer {
   display: flex;
