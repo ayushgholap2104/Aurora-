@@ -4,7 +4,7 @@
 
 ## 🕶 Preview
 
-![AURORA Preview](Aurora_Preview.png)
+![AURORA Preview](AuroraPreview.jpg)
 
 ## 📝 Overview
 
@@ -130,9 +130,7 @@ Contributions to improve AURORA, enhance its features, or fix bugs are welcome!
 
 ## 📄 License
 
-If this project has a license, check the [LICENSE](LICENSE) file for its terms.
+Check out the license ✒ [License](LICENSE.txt)
 
 ---
-
-🌌 **AURORA — Making Government Schemes Easier to Discover and Understand.**
 
